@@ -74,16 +74,10 @@ If you don't have a video file handy, you can right-click [this link](http://cfv
       "dynamicValue": {
         "fromStep": 0,
         "value": "id"
-      },
-      "in": "query",
-      "type": "string",
-      "required": false
+      }
     },
     {
-      "name": "fileData",
-      "in": "formData",
-      "type": "file",
-      "required": false
+      "name": "fileData"
     }
   ]
 }
@@ -128,55 +122,13 @@ Now we'll create a Media Entry to hold our video. Use the form below to enter yo
   "path": "/service/media/action/add",
   "parameters": [
     {
-      "name": "entry[mediaType]",
-      "group": "entry",
-      "enumLabels": [
-        "VIDEO",
-        "IMAGE",
-        "AUDIO",
-        "LIVE_STREAM_FLASH",
-        "LIVE_STREAM_WINDOWS_MEDIA",
-        "LIVE_STREAM_REAL_MEDIA",
-        "LIVE_STREAM_QUICKTIME"
-      ],
-      "type": "integer",
-      "in": "query",
-      "enum": [
-        1,
-        2,
-        5,
-        201,
-        202,
-        203,
-        204
-      ],
-      "x-enumLabels": [
-        "VIDEO",
-        "IMAGE",
-        "AUDIO",
-        "LIVE_STREAM_FLASH",
-        "LIVE_STREAM_WINDOWS_MEDIA",
-        "LIVE_STREAM_REAL_MEDIA",
-        "LIVE_STREAM_QUICKTIME"
-      ],
-      "description": "Enum Type: `KalturaMediaType`\n\nThe media type of the entry",
-      "x-group": "entry"
+      "name": "entry[mediaType]"
     },
     {
-      "name": "entry[name]",
-      "group": "entry",
-      "type": "string",
-      "in": "query",
-      "description": "Entry name (Min 1 chars)",
-      "x-group": "entry"
+      "name": "entry[name]"
     },
     {
-      "name": "entry[description]",
-      "group": "entry",
-      "type": "string",
-      "in": "query",
-      "description": "Entry description",
-      "x-group": "entry"
+      "name": "entry[description]"
     }
   ]
 }
@@ -199,60 +151,21 @@ Now that you've created a new Media Entry, you need to associate the uploaded vi
     {
       "name": "resource[objectType]",
       "x-consoleDefault": "KalturaUploadedFileTokenResource",
-      "consoleDefault": "KalturaUploadedFileTokenResource",
-      "group": "resource",
-      "in": "query",
-      "enum": [
-        "KalturaContentResource",
-        "KalturaAssetParamsResourceContainer",
-        "KalturaAssetsParamsResourceContainers",
-        "KalturaUrlResource",
-        "KalturaDataCenterContentResource",
-        "KalturaAssetResource",
-        "KalturaEntryResource",
-        "KalturaFileSyncResource",
-        "KalturaOperationResource",
-        "KalturaRemoteStorageResources",
-        "KalturaStringResource",
-        "KalturaRemoteStorageResource",
-        "KalturaSshUrlResource",
-        "KalturaDropFolderFileResource",
-        "KalturaServerFileResource",
-        "KalturaUploadedFileResource",
-        "KalturaUploadedFileTokenResource",
-        "KalturaWebcamTokenResource"
-      ],
-      "type": "string",
-      "x-group": "resource"
+      "consoleDefault": "KalturaUploadedFileTokenResource"
     },
     {
       "name": "entryId",
       "dynamicValue": {
         "fromStep": 2,
         "value": "id"
-      },
-      "in": "query",
-      "type": "string",
-      "required": false
+      }
     },
     {
       "name": "resource[token]",
       "dynamicValue": {
         "fromStep": 0,
         "value": "id"
-      },
-      "group": "resource",
-      "type": "string",
-      "in": "query",
-      "description": "Token that returned from upload.upload action or uploadToken.add action.",
-      "x-showCondition": {
-        "name": "resource[objectType]",
-        "value": [
-          "KalturaUploadedFileTokenResource",
-          "KalturaWebcamTokenResource"
-        ]
-      },
-      "x-group": "resource"
+      }
     }
   ]
 }
@@ -289,27 +202,7 @@ You can use kWidget to embed your video in HTML. The video may not be ready for 
         "fromStep": 2,
         "value": "id"
       },
-      "hidden": true,
-      "dynamicEnum": {
-        "path": "/service/media/action/list",
-        "method": "get",
-        "array": "objects",
-        "label": "name",
-        "value": "id"
-      },
-      "inputType": "text",
-      "in": "query",
-      "description": "Media entry id",
-      "type": "string",
-      "required": false,
-      "x-dynamicEnum": {
-        "path": "/service/media/action/list",
-        "method": "get",
-        "array": "objects",
-        "label": "name",
-        "value": "id"
-      },
-      "x-inputType": "text"
+      "hidden": true
     }
   ]
 }
