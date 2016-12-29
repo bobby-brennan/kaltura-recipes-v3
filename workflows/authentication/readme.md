@@ -32,25 +32,15 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
       "name": "partnerId"
     },
     {
-      "name": "userId"
+      "name": "userId",
+      "default": "lucybot@example.com"
     },
     {
       "name": "secret"
     },
     {
       "name": "type",
-      "enumLabels": [
-        "USER",
-        "ADMIN"
-      ],
-      "enum": [
-        0,
-        2
-      ],
-      "x-enumLabels": [
-        "USER",
-        "ADMIN"
-      ]
+      "default": 2
     }
   ]
 }
