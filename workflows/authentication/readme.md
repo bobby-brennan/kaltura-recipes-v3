@@ -29,24 +29,14 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
   "path": "/service/session/action/start",
   "parameters": [
     {
-      "name": "partnerId",
-      "in": "query",
-      "type": "integer",
-      "required": false
+      "name": "partnerId"
     },
     {
       "name": "userId",
-      "default": "lucybot@example.com",
-      "in": "query",
-      "type": "string",
-      "required": false
+      "default": "lucybot@example.com"
     },
     {
-      "name": "secret",
-      "in": "query",
-      "description": "Remember to provide the correct secret according to the sessionType you want",
-      "type": "string",
-      "required": false
+      "name": "secret"
     },
     {
       "name": "type",
@@ -55,10 +45,6 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
         "USER",
         "ADMIN"
       ],
-      "in": "query",
-      "description": "Enum Type: `KalturaSessionType`\n\nRegular session or Admin session",
-      "type": "integer",
-      "required": false,
       "enum": [
         0,
         2
@@ -82,11 +68,7 @@ You can validate your Kaltura session by calling ```user.get``` without a User I
   "path": "/service/user/action/get",
   "parameters": [
     {
-      "name": "userId",
-      "in": "query",
-      "description": "The user's unique identifier in the partner's system",
-      "type": "string",
-      "required": false
+      "name": "userId"
     }
   ]
 }
@@ -105,20 +87,10 @@ You can then use one of these partnerIds to get a privileged KS.
   "path": "/service/user/action/loginByLoginId",
   "parameters": [
     {
-      "name": "loginId",
-      "in": "query",
-      "description": "The user's email address that identifies the user for login",
-      "type": "string",
-      "required": false
+      "name": "loginId"
     },
     {
-      "name": "password",
-      "x-inputType": "password",
-      "inputType": "password",
-      "in": "query",
-      "description": "The user's password",
-      "type": "string",
-      "required": false
+      "name": "password"
     }
   ]
 }
