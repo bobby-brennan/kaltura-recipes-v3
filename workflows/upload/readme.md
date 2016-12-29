@@ -23,8 +23,7 @@ If you're working in JavaScript, the [jQuery File Upload widget](https://github.
 ```json
 {
   "method": "get",
-  "path": "/service/uploadtoken/action/add",
-  "parameters": []
+  "path": "/service/uploadtoken/action/add"
 }
 ```
 ### Sample Code (javascript)
@@ -67,19 +66,7 @@ If you don't have a video file handy, you can right-click [this link](http://cfv
 ```json
 {
   "method": "post",
-  "path": "/service/uploadtoken/action/upload",
-  "parameters": [
-    {
-      "name": "uploadTokenId",
-      "dynamicValue": {
-        "fromStep": 0,
-        "value": "id"
-      }
-    },
-    {
-      "name": "fileData"
-    }
-  ]
+  "path": "/service/uploadtoken/action/upload"
 }
 ```
 ### Sample Code (javascript)
@@ -119,18 +106,7 @@ Now we'll create a Media Entry to hold our video. Use the form below to enter yo
 ```json
 {
   "method": "get",
-  "path": "/service/media/action/add",
-  "parameters": [
-    {
-      "name": "entry[mediaType]"
-    },
-    {
-      "name": "entry[name]"
-    },
-    {
-      "name": "entry[description]"
-    }
-  ]
+  "path": "/service/media/action/add"
 }
 ```
 
@@ -146,27 +122,7 @@ Now that you've created a new Media Entry, you need to associate the uploaded vi
 ```json
 {
   "method": "post",
-  "path": "/service/media/action/addContent",
-  "parameters": [
-    {
-      "name": "resource[objectType]",
-      "x-consoleDefault": "KalturaUploadedFileTokenResource"
-    },
-    {
-      "name": "entryId",
-      "dynamicValue": {
-        "fromStep": 2,
-        "value": "id"
-      }
-    },
-    {
-      "name": "resource[token]",
-      "dynamicValue": {
-        "fromStep": 0,
-        "value": "id"
-      }
-    }
-  ]
+  "path": "/service/media/action/addContent"
 }
 ```
 
@@ -177,32 +133,6 @@ You can use kWidget to embed your video in HTML. The video may not be ready for 
 ```json
 {
   "method": "get",
-  "path": "/service/media/action/get",
-  "parameters": [
-    {
-      "name": "uiConf",
-      "dynamicEnum": {
-        "path": "/service/uiconf/action/list",
-        "method": "get",
-        "array": "objects",
-        "value": "id",
-        "label": "name",
-        "parameters": [
-          {
-            "name": "filter[objTypeEqual]",
-            "value": 1
-          }
-        ]
-      }
-    },
-    {
-      "name": "entryId",
-      "dynamicValue": {
-        "fromStep": 2,
-        "value": "id"
-      },
-      "hidden": true
-    }
-  ]
+  "path": "/service/media/action/get"
 }
 ```
