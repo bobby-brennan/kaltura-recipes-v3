@@ -54,11 +54,6 @@ You can validate your Kaltura session by calling ```user.get``` without a User I
 {
   "method": "get",
   "path": "/service/user/action/get",
-  "parameters": [
-    {
-      "name": "userId"
-    }
-  ],
   "ignoreParameters": [
     "format"
   ]
