@@ -26,7 +26,49 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
 ```json
 {
   "method": "get",
-  "path": "/service/session/action/start"
+  "path": "/service/session/action/start",
+  "parameters": [
+    {
+      "name": "partnerId",
+      "in": "query",
+      "type": "integer",
+      "required": false
+    },
+    {
+      "name": "userId",
+      "default": "lucybot@example.com",
+      "in": "query",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "secret",
+      "in": "query",
+      "description": "Remember to provide the correct secret according to the sessionType you want",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "type",
+      "default": 2,
+      "enumLabels": [
+        "USER",
+        "ADMIN"
+      ],
+      "in": "query",
+      "description": "Enum Type: `KalturaSessionType`\n\nRegular session or Admin session",
+      "type": "integer",
+      "required": false,
+      "enum": [
+        0,
+        2
+      ],
+      "x-enumLabels": [
+        "USER",
+        "ADMIN"
+      ]
+    }
+  ]
 }
 ```
 
@@ -37,7 +79,16 @@ You can validate your Kaltura session by calling ```user.get``` without a User I
 ```json
 {
   "method": "get",
-  "path": "/service/user/action/get"
+  "path": "/service/user/action/get",
+  "parameters": [
+    {
+      "name": "userId",
+      "in": "query",
+      "description": "The user's unique identifier in the partner's system",
+      "type": "string",
+      "required": false
+    }
+  ]
 }
 ```
 
@@ -51,7 +102,25 @@ You can then use one of these partnerIds to get a privileged KS.
 ```json
 {
   "method": "get",
-  "path": "/service/user/action/loginByLoginId"
+  "path": "/service/user/action/loginByLoginId",
+  "parameters": [
+    {
+      "name": "loginId",
+      "in": "query",
+      "description": "The user's email address that identifies the user for login",
+      "type": "string",
+      "required": false
+    },
+    {
+      "name": "password",
+      "x-inputType": "password",
+      "inputType": "password",
+      "in": "query",
+      "description": "The user's password",
+      "type": "string",
+      "required": false
+    }
+  ]
 }
 ```
 
@@ -64,6 +133,7 @@ You can then re-use `user.loginById` with a partnerId to login for as that parti
 ```json
 {
   "method": "get",
-  "path": "/service/partner/action/listPartnersForUser"
+  "path": "/service/partner/action/listPartnersForUser",
+  "parameters": []
 }
 ```
