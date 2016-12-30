@@ -2,7 +2,7 @@
 {}
 -->
 
-# New  &^ Workflow
+# New  Workflow
 
 
 ## New Step
