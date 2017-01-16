@@ -1,0 +1,1026 @@
+<html><head> <base href="/"> <title>Kaltura VPaaS API</title> <link href="dist/vendor.css" rel="stylesheet"> <link href="css/external.css" rel="stylesheet"> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" ,="" name="viewport"> <script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <style>side-menu[_ngcontent-bok-3] {
+        display: block;
+        margin-top: 21px;
+      }</style><style>@media (max-width: 767px) {
+        .side-menu[_ngcontent-bok-9] {
+          padding: 15px;
+          border-radius: 4px;
+          border: 1px solid #ccc;
+          background-color: #eee;
+        }
+      }
+      side-menu-item[_ngcontent-bok-9] {
+        display: block;
+      }
+      .btn.visible-xs[_ngcontent-bok-9] {
+        margin-top: 15px;
+      }</style><style>.try-it-button[_ngcontent-bok-8] {
+      margin-bottom: 30px;
+    }
+    .try-it[_ngcontent-bok-8] {
+      padding: 15px;
+      background-color: #f7f7f7;
+    }
+    .nav-tabs[_ngcontent-bok-8] {
+      margin-bottom: 15px;
+    }
+    .status-code-tabs[_ngcontent-bok-8] {
+      font-weight: bold;
+    }
+    .parameter[_ngcontent-bok-8] {
+      margin-bottom: 20px;
+    }
+    .parameter-details[_ngcontent-bok-8] {
+      padding-left: 15px;
+    }</style><style>subschema[_ngcontent-bok-13] {
+      display: block;
+    }</style><style>subschema[_ngcontent-bok-14] {
+        display: block;
+        margin-left: 10px;
+      }
+      .sibling-group[_ngcontent-bok-14]    > schema[_ngcontent-bok-14] {
+        margin-left: 0px;
+      }
+      .sibling-group[_ngcontent-bok-14]   h5[_ngcontent-bok-14] {
+        font-weight: normal;
+        font-style: italic;
+      }
+      .description[_ngcontent-bok-14] {
+        padding-left: 10px;
+      }
+      [_nghost-bok-14]     subschema .description p {
+        margin-bottom: 0px;
+      }</style><style>side-menu-item[_ngcontent-bok-10] {
+        display: block;
+      }
+      .side-menu-item[_ngcontent-bok-10] {
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        margin-top: 8px;
+        position: relative;
+      }
+      .side-menu-item[_ngcontent-bok-10], .side-menu-children[_ngcontent-bok-10] {
+        padding-left: 14px;
+      }
+      .fa-ellipsis-v[_ngcontent-bok-10] {
+        position: absolute;
+        left: 0px;
+        top: 3px;
+      }
+
+      .title[_ngcontent-bok-10] {
+        display: inline-block;
+        width: 100%;
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 18px;
+      }
+      .title.truncate[_ngcontent-bok-10] {
+        white-space: nowrap;
+      }
+      .title.active[_ngcontent-bok-10] {
+        text-decoration: none;
+      }
+      .title.inactive[_ngcontent-bok-10] {
+        color: inherit;
+      }</style></head> <body class=" spaced-for-kaltura-nav"> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:4px;width:0}</style> <div id="LoadingIndicator"> <div id="LoadingIndicatorProgress" class="bg-primary"></div> </div> <script> if (!window.location.href.match(/[?&]prerender=[^f0]/)) {
+      var totalTime = 5000;
+      var curPct = 0;
+      var interval = setInterval(function() {
+        let prog = document.getElementById('LoadingIndicatorProgress');
+        if (!prog) {
+          clearInterval(interval)
+        } else {
+          prog.style.width = (++curPct) + '%';
+        }
+      }, totalTime / 100)
+    } </script> <div id="KalturaSignInModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h3 class="modal-title">Log in to your Kaltura.com account</h3>
+      </div>
+      <form onsubmit="startKalturaLogin(); return false">
+        <div class="modal-body">
+          <div style="display:none" class="alert alert-danger">
+            There was an error signing in. Please check your account details and try again.
+          </div>
+          <label>E-mail</label>
+          <div class="form-group">
+            <input class="form-control" type="text" name="KalturaEmail">
+          </div>
+          <label>Password</label>
+          <div class="form-group">
+            <input class="form-control" type="password" name="KalturaPassword">
+          </div>
+          <p>Need an account? <a href="/?signup=true">Try Kaltura for free!</a></p>
+        </div>
+        <div class="modal-footer">
+          <button id="KalturaSignInButton" type="submit" class="btn btn-primary">Log In</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="KalturaSignUpModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h3 class="modal-title">Register for a free Kaltura.com VPaaS account</h3>
+      </div>
+      <form onsubmit="startKalturaSignup(); return false">
+        <div class="modal-body">
+          <div style="display:none" class="alert alert-danger">
+            There was an error signing up. Please check your account details and try again.
+          </div>
+          <div class="form-group">
+            <label>First Name</label>
+            <input class="form-control" type="text" name="firstName">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input class="form-control" type="text" name="lastName">
+          </div>
+          <div class="form-group">
+            <label>Company</label>
+            <input class="form-control" type="text" name="company">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="text" name="email">
+          </div>
+          <div class="form-group country-input">
+            <label>Country</label>
+            <select name="country" class="form-control"><option value="US">United States</option>
+<option value="AF">Afghanistan</option>
+<option value="AL">Albania</option>
+<option value="DZ">Algeria</option>
+<option value="AS">American Samoa</option>
+<option value="AD">Andorra</option>
+<option value="AO">Angola</option>
+<option value="AI">Anguilla</option>
+<option value="AQ">Antarctica</option>
+<option value="AG">Antigua and Barbuda</option>
+<option value="AR">Argentina</option>
+<option value="AM">Armenia</option>
+<option value="AW">Aruba</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="AZ">Azerbaijan</option>
+<option value="AP">Azores</option>
+<option value="BS">Bahamas</option>
+<option value="BH">Bahrain</option>
+<option value="BD">Bangladesh</option>
+<option value="BB">Barbados</option>
+<option value="BY">Belarus</option>
+<option value="BE">Belgium</option>
+<option value="BZ">Belize</option>
+<option value="BJ">Benin</option>
+<option value="BM">Bermuda</option>
+<option value="BT">Bhutan</option>
+<option value="BO">Bolivia</option>
+<option value="BA">Bosnia And Herzegowina</option>
+<option value="XB">Bosnia-Herzegovina</option>
+<option value="BW">Botswana</option>
+<option value="BV">Bouvet Island</option>
+<option value="BR">Brazil</option>
+<option value="IO">British Indian Ocean Territory</option>
+<option value="VG">British Virgin Islands</option>
+<option value="BN">Brunei Darussalam</option>
+<option value="BG">Bulgaria</option>
+<option value="BF">Burkina Faso</option>
+<option value="BI">Burundi</option>
+<option value="KH">Cambodia</option>
+<option value="CM">Cameroon</option>
+<option value="CA">Canada</option>
+<option value="CV">Cape Verde</option>
+<option value="KY">Cayman Islands</option>
+<option value="CF">Central African Republic</option>
+<option value="TD">Chad</option>
+<option value="CL">Chile</option>
+<option value="CN">China</option>
+<option value="CX">Christmas Island</option>
+<option value="CC">Cocos (Keeling) Islands</option>
+<option value="CO">Colombia</option>
+<option value="KM">Comoros</option>
+<option value="CG">Congo</option>
+<option value="CD">Congo, The Democratic Republic O</option>
+<option value="CK">Cook Islands</option>
+<option value="XE">Corsica</option>
+<option value="CR">Costa Rica</option>
+<option value="CI">Cote d` Ivoire (Ivory Coast)</option>
+<option value="HR">Croatia</option>
+<option value="CU">Cuba</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="DK">Denmark</option>
+<option value="DJ">Djibouti</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="TP">East Timor</option>
+<option value="EC">Ecuador</option>
+<option value="EG">Egypt</option>
+<option value="SV">El Salvador</option>
+<option value="GQ">Equatorial Guinea</option>
+<option value="ER">Eritrea</option>
+<option value="EE">Estonia</option>
+<option value="ET">Ethiopia</option>
+<option value="FK">Falkland Islands (Malvinas)</option>
+<option value="FO">Faroe Islands</option>
+<option value="FJ">Fiji</option>
+<option value="FI">Finland</option>
+<option value="FR">France (Includes Monaco)</option>
+<option value="FX">France, Metropolitan</option>
+<option value="GF">French Guiana</option>
+<option value="PF">French Polynesia</option>
+<option value="TA">French Polynesia (Tahiti)</option>
+<option value="TF">French Southern Territories</option>
+<option value="GA">Gabon</option>
+<option value="GM">Gambia</option>
+<option value="GE">Georgia</option>
+<option value="DE">Germany</option>
+<option value="GH">Ghana</option>
+<option value="GI">Gibraltar</option>
+<option value="GR">Greece</option>
+<option value="GL">Greenland</option>
+<option value="GD">Grenada</option>
+<option value="GP">Guadeloupe</option>
+<option value="GU">Guam</option>
+<option value="GT">Guatemala</option>
+<option value="GN">Guinea</option>
+<option value="GW">Guinea-Bissau</option>
+<option value="GY">Guyana</option>
+<option value="HT">Haiti</option>
+<option value="HM">Heard And Mc Donald Islands</option>
+<option value="VA">Holy See (Vatican City State)</option>
+<option value="HN">Honduras</option>
+<option value="HK">Hong Kong</option>
+<option value="HU">Hungary</option>
+<option value="IS">Iceland</option>
+<option value="IN">India</option>
+<option value="ID">Indonesia</option>
+<option value="IR">Iran</option>
+<option value="IQ">Iraq</option>
+<option value="IE">Ireland</option>
+<option value="EI">Ireland (Eire)</option>
+<option value="IL">Israel</option>
+<option value="IT">Italy</option>
+<option value="JM">Jamaica</option>
+<option value="JP">Japan</option>
+<option value="JO">Jordan</option>
+<option value="KZ">Kazakhstan</option>
+<option value="KE">Kenya</option>
+<option value="KI">Kiribati</option>
+<option value="KP">Korea, Democratic People'S Repub</option>
+<option value="KW">Kuwait</option>
+<option value="KG">Kyrgyzstan</option>
+<option value="LA">Laos</option>
+<option value="LV">Latvia</option>
+<option value="LB">Lebanon</option>
+<option value="LS">Lesotho</option>
+<option value="LR">Liberia</option>
+<option value="LY">Libya</option>
+<option value="LI">Liechtenstein</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MO">Macao</option>
+<option value="MK">Macedonia</option>
+<option value="MG">Madagascar</option>
+<option value="ME">Madeira Islands</option>
+<option value="MW">Malawi</option>
+<option value="MY">Malaysia</option>
+<option value="MV">Maldives</option>
+<option value="ML">Mali</option>
+<option value="MT">Malta</option>
+<option value="MH">Marshall Islands</option>
+<option value="MQ">Martinique</option>
+<option value="MR">Mauritania</option>
+<option value="MU">Mauritius</option>
+<option value="YT">Mayotte</option>
+<option value="MX">Mexico</option>
+<option value="FM">Micronesia, Federated States Of</option>
+<option value="MD">Moldova, Republic Of</option>
+<option value="MC">Monaco</option>
+<option value="MN">Mongolia</option>
+<option value="MS">Montserrat</option>
+<option value="MA">Morocco</option>
+<option value="MZ">Mozambique</option>
+<option value="MM">Myanmar (Burma)</option>
+<option value="NA">Namibia</option>
+<option value="NR">Nauru</option>
+<option value="NP">Nepal</option>
+<option value="NL">Netherlands</option>
+<option value="AN">Netherlands Antilles</option>
+<option value="NC">New Caledonia</option>
+<option value="NZ">New Zealand</option>
+<option value="NI">Nicaragua</option>
+<option value="NE">Niger</option>
+<option value="NG">Nigeria</option>
+<option value="NU">Niue</option>
+<option value="NF">Norfolk Island</option>
+<option value="MP">Northern Mariana Islands</option>
+<option value="NO">Norway</option>
+<option value="OM">Oman</option>
+<option value="PK">Pakistan</option>
+<option value="PW">Palau</option>
+<option value="PS">Palestinian Territory, Occupied</option>
+<option value="PA">Panama</option>
+<option value="PG">Papua New Guinea</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="PH">Philippines</option>
+<option value="PN">Pitcairn</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="PR">Puerto Rico</option>
+<option value="QA">Qatar</option>
+<option value="RE">Reunion</option>
+<option value="RO">Romania</option>
+<option value="RU">Russian Federation</option>
+<option value="RW">Rwanda</option>
+<option value="KN">Saint Kitts And Nevis</option>
+<option value="SM">San Marino</option>
+<option value="ST">Sao Tome and Principe</option>
+<option value="SA">Saudi Arabia</option>
+<option value="SN">Senegal</option>
+<option value="XS">Serbia-Montenegro</option>
+<option value="SC">Seychelles</option>
+<option value="SL">Sierra Leone</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovak Republic</option>
+<option value="SI">Slovenia</option>
+<option value="SB">Solomon Islands</option>
+<option value="SO">Somalia</option>
+<option value="ZA">South Africa</option>
+<option value="GS">South Georgia And The South Sand</option>
+<option value="KR">South Korea</option>
+<option value="ES">Spain</option>
+<option value="LK">Sri Lanka</option>
+<option value="NV">St. Christopher and Nevis</option>
+<option value="SH">St. Helena</option>
+<option value="LC">St. Lucia</option>
+<option value="PM">St. Pierre and Miquelon</option>
+<option value="VC">St. Vincent and the Grenadines</option>
+<option value="SD">Sudan</option>
+<option value="SR">Suriname</option>
+<option value="SJ">Svalbard And Jan Mayen Islands</option>
+<option value="SZ">Swaziland</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="SY">Syrian Arab Republic</option>
+<option value="TW">Taiwan</option>
+<option value="TJ">Tajikistan</option>
+<option value="TZ">Tanzania</option>
+<option value="TH">Thailand</option>
+<option value="TG">Togo</option>
+<option value="TK">Tokelau</option>
+<option value="TO">Tonga</option>
+<option value="TT">Trinidad and Tobago</option>
+<option value="XU">Tristan da Cunha</option>
+<option value="TN">Tunisia</option>
+<option value="TR">Turkey</option>
+<option value="TM">Turkmenistan</option>
+<option value="TC">Turks and Caicos Islands</option>
+<option value="TV">Tuvalu</option>
+<option value="UG">Uganda</option>
+<option value="UA">Ukraine</option>
+<option value="AE">United Arab Emirates</option>
+<option value="UK">United Kingdom</option>
+<option value="GB">Great Britain</option>
+<option value="UM">United States Minor Outlying Isl</option>
+<option value="UY">Uruguay</option>
+<option value="UZ">Uzbekistan</option>
+<option value="VU">Vanuatu</option>
+<option value="XV">Vatican City</option>
+<option value="VE">Venezuela</option>
+<option value="VN">Vietnam</option>
+<option value="VI">Virgin Islands (U.S.)</option>
+<option value="WF">Wallis and Furuna Islands</option>
+<option value="EH">Western Sahara</option>
+<option value="WS">Western Samoa</option>
+<option value="YE">Yemen</option>
+<option value="YU">Yugoslavia</option>
+<option value="ZR">Zaire</option>
+<option value="ZM">Zambia</option>
+<option value="ZW">Zimbabwe</option></select>
+          </div>
+          <div class="form-group state-input" style="">
+            <label>State</label>
+            <select name="state" class="form-control"><option value="AK">Alaska</option>
+<option value="AL">Alabama</option>
+<option value="AR">Arkansas</option>
+<option value="AS">American Samoa</option>
+<option value="AZ">Arizona</option>
+<option value="CA">California</option>
+<option value="CO">Colorado</option>
+<option value="CT">Connecticut</option>
+<option value="DC">D.C.</option>
+<option value="DE">Delaware</option>
+<option value="FL">Florida</option>
+<option value="FM">Micronesia</option>
+<option value="GA">Georgia</option>
+<option value="GU">Guam</option>
+<option value="HI">Hawaii</option>
+<option value="IA">Iowa</option>
+<option value="ID">Idaho</option>
+<option value="IL">Illinois</option>
+<option value="IN">Indiana</option>
+<option value="KS">Kansas</option>
+<option value="KY">Kentucky</option>
+<option value="LA">Louisiana</option>
+<option value="MA">Massachusetts</option>
+<option value="MD">Maryland</option>
+<option value="ME">Maine</option>
+<option value="MH">Marshall Islands</option>
+<option value="MI">Michigan</option>
+<option value="MN">Minnesota</option>
+<option value="MO">Missouri</option>
+<option value="MP">Marianas</option>
+<option value="MS">Mississippi</option>
+<option value="MT">Montana</option>
+<option value="NC">North Carolina</option>
+<option value="ND">North Dakota</option>
+<option value="NE">Nebraska</option>
+<option value="NH">New Hampshire</option>
+<option value="NJ">New Jersey</option>
+<option value="NM">New Mexico</option>
+<option value="NV">Nevada</option>
+<option value="NY">New York</option>
+<option value="OH">Ohio</option>
+<option value="OK">Oklahoma</option>
+<option value="OR">Oregon</option>
+<option value="PA">Pennsylvania</option>
+<option value="PR">Puerto Rico</option>
+<option value="PW">Palau</option>
+<option value="RI">Rhode Island</option>
+<option value="SC">South Carolina</option>
+<option value="SD">South Dakota</option>
+<option value="TN">Tennessee</option>
+<option value="TX">Texas</option>
+<option value="UT">Utah</option>
+<option value="VA">Virginia</option>
+<option value="VI">Virgin Islands</option>
+<option value="VT">Vermont</option>
+<option value="WA">Washington</option>
+<option value="WI">Wisconsin</option>
+<option value="WV">West Virginia</option>
+<option value="WY">Wyoming</option>
+<option value="AA">Military Americas</option>
+<option value="AE">Military Europe/ME/Canada</option>
+<option value="AP">Military Pacific</option></select>
+          </div>
+          <div class="form-group">
+            <label>How are you planning to use Kaltura?</label>
+            <textarea class="form-control" name="usage"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Would you like a Kaltura expert to help architect/design a solution with you?</label>
+            <br>
+            <label>
+              <input type="radio" name="help" value="true"> Yes
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="help" value="false"> No
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="KalturaSignUpButton" type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div id="KalturaPartnerIDModal" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h3 class="modal-title">Choose a Kaltura Account</h3>
+      </div>
+      <div class="modal-body">
+        <p>Please choose a Kaltura Account ID (aka Partner ID) to use</p>
+        <div class="dropdown">
+          <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">Account ID <i class="fa fa-caret-down"></i></a>
+          <ul class="dropdown-menu"><li><i class="fa fa-spin fa-refresh"></i></li></ul>
+        </div>
+        <h1 class="text-center kaltura-loading"><i class="fa fa-spin fa-refresh"></i></h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav id="KalturaNav" class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#NavbarCollapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <i class="fa fa-bars"></i>
+      </button>
+      <a href="/" class="navbar-brand">
+        <img src="assets/img/kaltura_dev.png" height="50" width="212">
+      </a>
+    </div>
+    <div id="NavbarCollapse" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="navbar-link">
+          <a href="https://vpaas.kaltura.com">VPaaS</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/api-docs">API Docs</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/console">API Console</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/api-docs/#/Client%20Libraries">Client Libraries</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/workflows">Interactive Workflows</a>
+        </li>
+      </ul>
+      <ul id="KalturaAuthLinks" class="nav navbar-nav navbar-right"><li class="navbar-link"><a data-toggle="modal" data-target="#KalturaSignUpModal">Sign Up</a></li><li class="navbar-link"><a onclick="lucybot.startLogin()">Sign In</a></li></ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<script>
+var keepNav = true;
+var keepSidebar = true;
+if (window.lucybot.embed) {
+  keepNav = false;
+  if (!window.lucybot.showNavigation) {
+    keepSidebar = false;
+  }
+}
+if (!window.location.href.match(/\/workflows/)) {
+  keepSidebar = false;
+}
+
+if (!keepNav) {
+  document.getElementById('KalturaNav').remove();
+} else {
+  document.getElementsByTagName('body')[0].className += ' spaced-for-kaltura-nav';
+}
+if (!keepSidebar) {
+  document.getElementById('KalturaSidebar').remove();
+} else {
+  document.getElementsByTagName('body')[0].className += ' spaced-for-kaltura-sidebar';
+}
+</script>
+
+ <app class="loading" ng-version="2.4.3">
+      <router-outlet></router-outlet><documentation _nghost-bok-3=""><div _ngcontent-bok-3="" class="container-fluid main-container" id="Documentation"><div _ngcontent-bok-3="" class="row"><div _ngcontent-bok-3="" class="col-xs-12 col-sm-4 col-md-3 side-menu-col"><side-menu _ngcontent-bok-3="" basepage="documentation" _nghost-bok-9="">
+      <div _ngcontent-bok-9="" class="side-menu">
+        <div _ngcontent-bok-9="" class="input-group input-group-sm">
+          <input _ngcontent-bok-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text">
+          <span _ngcontent-bok-9="" class="input-group-btn">
+            <!--template bindings={}--><a _ngcontent-bok-9="" class="btn btn-default">
+              <i _ngcontent-bok-9="" class="fa fa-search"></i>
+            </a>
+            <!--template bindings={}-->
+          </span>
+        </div>
+        <a _ngcontent-bok-9="" class="btn btn-primary visible-xs">
+          <span _ngcontent-bok-9="">Navigate</span>
+          <i _ngcontent-bok-9="" class="fa fa-right fa-caret-down"></i>
+        </a>
+        <!--template bindings={}--><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Overview">
+          <span _ngcontent-bok-10="">Overview</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Client_Libraries">
+          <span _ngcontent-bok-10="">Client Libraries</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/XML_Schemas">
+          <span _ngcontent-bok-10="">XML Schemas</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Generate_API_Sessions">
+          <span _ngcontent-bok-10="">Generate API Sessions</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Ingest_and_Upload_Media">
+          <span _ngcontent-bok-10="">Ingest and Upload Media</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates">
+          <span _ngcontent-bok-10="">Execute Bulk Ingest and Updates</span>
+        </a>
+      </div>
+      <!--template bindings={}--><div _ngcontent-bok-10="" class="side-menu-children">
+        <!--template bindings={}--><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/media_bulkUploadAdd">
+          <span _ngcontent-bok-10="">media.bulkUploadAdd</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/user_addFromBulkUpload">
+          <span _ngcontent-bok-10="">user.addFromBulkUpload</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/category_addFromBulkUpload">
+          <span _ngcontent-bok-10="">category.addFromBulkUpload</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/cuePoint_addFromBulk">
+          <span _ngcontent-bok-10="">cuePoint.addFromBulk</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/categoryEntry_addFromBulkUpload">
+          <span _ngcontent-bok-10="">categoryEntry.addFromBulkUpload</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/categoryUser_addFromBulkUpload">
+          <span _ngcontent-bok-10="">categoryUser.addFromBulkUpload</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulk">
+          <span _ngcontent-bok-10="">bulk</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/schema">
+          <span _ngcontent-bok-10="">schema</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/dropFolder">
+          <span _ngcontent-bok-10="">dropFolder</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/dropFolderFile">
+          <span _ngcontent-bok-10="">dropFolderFile</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/virusScanProfile">
+          <span _ngcontent-bok-10="">virusScanProfile</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/aspera">
+          <span _ngcontent-bok-10="">aspera</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload">
+          <span _ngcontent-bok-10="">bulkUpload</span>
+        </a>
+      </div>
+      <!--template bindings={}--><div _ngcontent-bok-10="" class="side-menu-children">
+        <!--template bindings={}--><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload/bulkUpload_abort">
+          <span _ngcontent-bok-10="">bulkUpload.abort</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-bok-10="" class="title active truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload/bulkUpload_add">
+          <span _ngcontent-bok-10="">bulkUpload.add</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload/bulkUpload_get">
+          <span _ngcontent-bok-10="">bulkUpload.get</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload/bulkUpload_list">
+          <span _ngcontent-bok-10="">bulkUpload.list</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload/bulkUpload_serve">
+          <span _ngcontent-bok-10="">bulkUpload.serve</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-10="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive truncate" href="/api-docs/Execute_Bulk_Ingest_and_Updates/bulkUpload/bulkUpload_serveLog">
+          <span _ngcontent-bok-10="">bulkUpload.serveLog</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item>
+      </div>
+    </side-menu-item>
+      </div>
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Convert_and_Transcode_Media">
+          <span _ngcontent-bok-10="">Convert and Transcode Media</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Live_Stream_and_Broadcast">
+          <span _ngcontent-bok-10="">Live Stream and Broadcast</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Enrich_and_Organize_Metadata">
+          <span _ngcontent-bok-10="">Enrich and Organize Metadata</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Search_Discover_and_Personalize">
+          <span _ngcontent-bok-10="">Search, Discover and Personalize</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Engage_and_Publish">
+          <span _ngcontent-bok-10="">Engage and Publish</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Review_Media_Analytics">
+          <span _ngcontent-bok-10="">Review Media Analytics</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Deliver_and_Distribute_Media">
+          <span _ngcontent-bok-10="">Deliver and Distribute Media</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Secure_Control_and_Govern">
+          <span _ngcontent-bok-10="">Secure, Control and Govern</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Optimize_API_Requests">
+          <span _ngcontent-bok-10="">Optimize API Requests</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks">
+          <span _ngcontent-bok-10="">Integration, Scheduling and Hooks</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Encrypt_and_License_Content">
+          <span _ngcontent-bok-10="">Encrypt and License Content</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Manage_Documents_and_Other_Assets">
+          <span _ngcontent-bok-10="">Manage Documents and Other Assets</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Manage_and_Deliver_Apps_and_Widgets">
+          <span _ngcontent-bok-10="">Manage and Deliver Apps and Widgets</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Manage_Backend_and_Storage">
+          <span _ngcontent-bok-10="">Manage Backend and Storage</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/General_Objects">
+          <span _ngcontent-bok-10="">General Objects</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-bok-9="" _nghost-bok-10="">
+      <div _ngcontent-bok-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-bok-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-bok-10="" class="title inactive" href="/api-docs/Error_Codes">
+          <span _ngcontent-bok-10="">Error Codes</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item>
+      </div>
+    </side-menu></div><div _ngcontent-bok-3="" class="col-xs-12 col-sm-8 col-md-9"><h3 _ngcontent-bok-3="" class="breadcrumbs"><span _ngcontent-bok-3="">Documentation</span><!--template bindings={}--><span _ngcontent-bok-3=""><i _ngcontent-bok-3="" class="fa fa-chevron-right"></i><span _ngcontent-bok-3="">bulkUpload.add</span></span></h3><!--template bindings={}--><div _ngcontent-bok-3="" class="docs-body"><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div _ngcontent-bok-3="" class="docs-operation"><operation-documentation _ngcontent-bok-3="" _nghost-bok-8=""><div _ngcontent-bok-8="" class="route-description"><p>Add new bulk upload batch job</p>
+<p>Conversion profile id can be specified in the API or in the CSV file, the one in the CSV file will be stronger.</p>
+<p>If no conversion profile was specified, partner's default will be used</p>
+</div><a _ngcontent-bok-8="" class="btn btn-primary try-it-button">Try it out</a><!--template bindings={}--><div _ngcontent-bok-8="" class="row"><div _ngcontent-bok-8="" class="col-xs-12 col-md-6"><h4 _ngcontent-bok-8="">Parameters</h4><p _ngcontent-bok-8="" hidden=""><i _ngcontent-bok-8="">This operation has no parameters.</i></p><ul _ngcontent-bok-8="" class="nav nav-tabs location-tabs"><!--template bindings={}--><li _ngcontent-bok-8="" role="presentation" class="active"><a _ngcontent-bok-8="" class="text-capitalize">query</a></li><li _ngcontent-bok-8="" role="presentation"><a _ngcontent-bok-8="" class="text-capitalize">body</a></li></ul><!--template bindings={}--><div _ngcontent-bok-8="" class="parameter"><div _ngcontent-bok-8="" class="parameter-title"><span _ngcontent-bok-8="" class="parameter-name hljs-attr">format:</span><span _ngcontent-bok-8="" class="parameter-type hljs-string">integer</span><i _ngcontent-bok-8="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-bok-8="" class="parameter-details"><div _ngcontent-bok-8="" class="description"><p>The format of the response</p>
+</div><!--template bindings={}--><div _ngcontent-bok-8="" hidden=""></div><div _ngcontent-bok-8="">Allowed values are:<div _ngcontent-bok-8="" class="enum-list"><ul _ngcontent-bok-8=""><!--template bindings={}--><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">1</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (JSON)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">2</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (XML)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">3</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (PHP)</span></i></li></ul></div></div></div></div><div _ngcontent-bok-8="" class="parameter"><div _ngcontent-bok-8="" class="parameter-title"><span _ngcontent-bok-8="" class="parameter-name hljs-attr">conversionProfileId:</span><span _ngcontent-bok-8="" class="parameter-type hljs-string">integer</span><i _ngcontent-bok-8="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-bok-8="" class="parameter-details"><div _ngcontent-bok-8="" class="description"><p>Convertion profile id to use for converting the current bulk (-1 to use partner's default)</p>
+</div><!--template bindings={}--><div _ngcontent-bok-8="" hidden=""></div><div _ngcontent-bok-8="" hidden="">Allowed values are:<div _ngcontent-bok-8="" class="enum-list"><ul _ngcontent-bok-8=""><!--template bindings={}--></ul></div></div></div></div><div _ngcontent-bok-8="" class="parameter" hidden=""><div _ngcontent-bok-8="" class="parameter-title"><span _ngcontent-bok-8="" class="parameter-name hljs-attr">csvFileData:</span><span _ngcontent-bok-8="" class="parameter-type hljs-string">file</span><i _ngcontent-bok-8="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-bok-8="" class="parameter-details"><div _ngcontent-bok-8="" class="description"><p>bulk upload file</p>
+</div><!--template bindings={}--><div _ngcontent-bok-8="" hidden=""></div><div _ngcontent-bok-8="" hidden="">Allowed values are:<div _ngcontent-bok-8="" class="enum-list"><ul _ngcontent-bok-8=""><!--template bindings={}--></ul></div></div></div></div><div _ngcontent-bok-8="" class="parameter"><div _ngcontent-bok-8="" class="parameter-title"><span _ngcontent-bok-8="" class="parameter-name hljs-attr">bulkUploadType:</span><span _ngcontent-bok-8="" class="parameter-type hljs-string">string</span><i _ngcontent-bok-8="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-bok-8="" class="parameter-details"><div _ngcontent-bok-8="" class="description"><p>Enum Type: <code>KalturaBulkUploadType</code></p>
+</div><!--template bindings={}--><div _ngcontent-bok-8="" hidden=""></div><div _ngcontent-bok-8="">Allowed values are:<div _ngcontent-bok-8="" class="enum-list"><ul _ngcontent-bok-8=""><!--template bindings={}--><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">bulkUploadCsv.CSV</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (CSV)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">bulkUploadFilter.FILTER</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (FILTER)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">bulkUploadXml.XML</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (XML)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">dropFolderXmlBulkUpload.DROP_FOLDER_XML</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (DROP_FOLDER_XML)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">scheduleBulkUpload.ICAL</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (ICAL)</span></i></li><li _ngcontent-bok-8=""><span _ngcontent-bok-8="">scheduleDropFolder.DROP_FOLDER_ICAL</span><!--template bindings={}--><i _ngcontent-bok-8=""><span _ngcontent-bok-8=""> (DROP_FOLDER_ICAL)</span></i></li></ul></div></div></div></div><div _ngcontent-bok-8="" class="parameter"><div _ngcontent-bok-8="" class="parameter-title"><span _ngcontent-bok-8="" class="parameter-name hljs-attr">uploadedBy:</span><span _ngcontent-bok-8="" class="parameter-type hljs-string">string</span><i _ngcontent-bok-8="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-bok-8="" class="parameter-details"><div _ngcontent-bok-8="" class="description" hidden=""></div><!--template bindings={}--><div _ngcontent-bok-8="" hidden=""></div><div _ngcontent-bok-8="" hidden="">Allowed values are:<div _ngcontent-bok-8="" class="enum-list"><ul _ngcontent-bok-8=""><!--template bindings={}--></ul></div></div></div></div><div _ngcontent-bok-8="" class="parameter"><div _ngcontent-bok-8="" class="parameter-title"><span _ngcontent-bok-8="" class="parameter-name hljs-attr">fileName:</span><span _ngcontent-bok-8="" class="parameter-type hljs-string">string</span><i _ngcontent-bok-8="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-bok-8="" class="parameter-details"><div _ngcontent-bok-8="" class="description"><p>Friendly name of the file, used to be recognized later in the logs.</p>
+</div><!--template bindings={}--><div _ngcontent-bok-8="" hidden=""></div><div _ngcontent-bok-8="" hidden="">Allowed values are:<div _ngcontent-bok-8="" class="enum-list"><ul _ngcontent-bok-8=""><!--template bindings={}--></ul></div></div></div></div></div><div _ngcontent-bok-8="" class="col-xs-12 col-md-6"><h4 _ngcontent-bok-8="">Responses</h4><ul _ngcontent-bok-8="" class="nav nav-tabs status-code-tabs"><!--template bindings={}--><li _ngcontent-bok-8="" role="presentation" class="active"><a _ngcontent-bok-8=""><span _ngcontent-bok-8="" class="text-success">200</span></a></li></ul><div _ngcontent-bok-8=""><p>Success</p>
+</div><!--template bindings={}--><div _ngcontent-bok-8="" class="response-schema hide-code"><schema _ngcontent-bok-8="" _nghost-bok-13=""><div _ngcontent-bok-13="" class="form-group"><div _ngcontent-bok-13="" class="btn-group"><a _ngcontent-bok-13="" class="btn btn-default active">Schema</a><a _ngcontent-bok-13="" class="btn btn-default">Example</a></div></div><pre _ngcontent-bok-13="" class="hljs" hidden=""><code _ngcontent-bok-13="">{
+  <span class="hljs-attr">"bulkFileUrl"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"bulkUploadObjectType"</span>: <span class="hljs-string">"scheduleBulkUpload.SCHEDULE_EVENT"</span>,
+  <span class="hljs-attr">"bulkUploadType"</span>: <span class="hljs-string">"bulkUploadCsv.CSV"</span>,
+  <span class="hljs-attr">"csvFileUrl"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"error"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"errorNumber"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"errorType"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"fileName"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"logFileUrl"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"numOfEntries"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"numOfObjects"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"results"</span>: [
+    {
+      <span class="hljs-attr">"action"</span>: <span class="hljs-string">"scheduleBulkUpload.CANCEL"</span>,
+      <span class="hljs-attr">"bulkUploadJobId"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"bulkUploadResultObjectType"</span>: <span class="hljs-string">"scheduleBulkUpload.SCHEDULE_EVENT"</span>,
+      <span class="hljs-attr">"errorCode"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"errorDescription"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"errorType"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"lineIndex"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"objectErrorDescription"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"objectId"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"objectStatus"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"partnerData"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"partnerId"</span>: <span class="hljs-number">0</span>,
+      <span class="hljs-attr">"pluginsData"</span>: [
+        <span class="hljs-literal">null</span>
+      ],
+      <span class="hljs-attr">"rowData"</span>: <span class="hljs-string">""</span>,
+      <span class="hljs-attr">"status"</span>: <span class="hljs-string">"1"</span>
+    }
+  ],
+  <span class="hljs-attr">"status"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"uploadedBy"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"uploadedByUserId"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"uploadedOn"</span>: <span class="hljs-number">0</span>
+}</code></pre><subschema _ngcontent-bok-13="" _nghost-bok-14=""><span _ngcontent-bok-14="" class="title-line"><!--template bindings={}--><span _ngcontent-bok-14="" class="schema-type hljs-string"><span _ngcontent-bok-14="">object</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-bok-14=""><i _ngcontent-bok-14="" class="fa fa-right fa-caret-left"></i></a></span><!--template bindings={}--></subschema></schema></div></div></div></operation-documentation></div></div><!--template bindings={}--></div></div></div></documentation>
+      </app> <div id="KalturaFooter" class="w-section footer-section">
+  <div class="w-container container footer-container">
+    <div class="row">
+      <div class="col-xs-3 footer-links-columns">
+        <h5 class="footer-headings">VPaaS</h5><a class="footer-links" href="https://vpaas.kaltura.com">Overview</a><a class="footer-links" href="/api-docs/#/Overview">API</a><a data-ix="scroll-to-apply" class="footer-links" href="https://vpaas.kaltura.com/#case_study_section" id="case_study_link">Case Studies</a><a class="footer-links" href="/register.html">Register for a Free Trial</a>
+      </div>
+      <div class="col-xs-3 footer-links-columns">
+        <h5 class="footer-headings">Tools</h5><a class="footer-links" href="/console">API Test Console</a><a class="footer-links" href="/api-docs/#/Client%20Libraries">Client Libraries</a><a class="footer-links" href="/api-docs/#/Client%20Libraries">iOS &amp; Android Mobile SDKs</a><a class="footer-links" href="/recipes/">Interactive Code Recipes</a><a class="footer-links" href="https://vpaas.kaltura.com/documentation/04_Web-Video-Player/">Player Toolkit</a><a class="footer-links" href="https://github.com/kaltura" target="_blank">Kaltura on Github</a><a class="footer-links" href="https://stackoverflow.com/questions/tagged/kaltura" target="_blank">Kaltura on Stack Overflow</a>
+      </div>
+      <div class="col-xs-3 footer-links-columns">
+        <h5 class="footer-headings">Resources</h5><a class="footer-links" href="/api-docs/">API Documentation</a><a class="footer-links" href="https://knowledge.kaltura.com" target="_blank">Knowledge Center</a><a class="footer-links" href="https://university.kaltura.com" target="_blank">Kaltura University</a><a class="footer-links" href="https://corp.kaltura.com/live-webinars" target="_blank">Webinars</a><a class="footer-links" href="http://videos.kaltura.com" target="_blank">Kaltura Video Tutorials</a>
+      </div>
+      <div class="col-xs-3 footer-links-columns">
+        <h5 class="footer-headings">Community</h5><a class="footer-links" href="/partners">Partner Network</a><a class="footer-links" href="https://forum.kaltura.org" target="_blank">Forums</a><a class="footer-links" href="#" target="_blank">Kaltura Developer Days</a><a class="footer-links" href="https://corp.kaltura.com/kaltura-events" target="_blank">Meet Kaltura at Events</a><a class="footer-links" href="https://blog.kaltura.com">Blog</a>
+        <h5 class="footer-headings footer-heading-margin">Open Source</h5><a class="footer-links" href="https://www.kaltura.org/" target="_blank">opensource.kaltura.org</a>
+      </div>
+    </div>
+    <div class="social-icon-container">
+      <a href="https://stackoverflow.com/questions/tagged/kaltura" target="_blank"><div class="social-div fa-stack-overflow fa fa-2x"></div></a>
+      <a href="https://github.com/kaltura" target="_blank"><div class="social-div fa-github fa fa-2x"></div></a>
+      <a href="https://twitter.com/Kaltura" target="_blank"><div class="social-div fa fa-twitter fa-2x"></div></a>
+      <a href="https://www.linkedin.com/company/kaltura" target="_blank"><div class="social-div fa fa-linkedin fa-2x"></div></a>
+    </div>
+  </div>
+  <div class="w-container container copyright-container">
+    <div class="row">
+      <div class="col-xs-8 col-md-6 copyright-column">
+        <div class="footer-copyright">Copyright © 2016 Kaltura Inc.</div>
+        <div class="footer-copyright-description">All Rights Reserved. Designated trademarks and brands are the property of their respective owners.
+          <br>Use of this web site constitutes acceptance of the Terms of Use and Privacy Policy.</div>
+      </div>
+      <div class="col-xs-4 col-md-6 footer-last-links-column"><a class="sub-footer-links" target="_blank" href="https://corp.kaltura.com">Kaltura.com</a><a class="sub-footer-links" href="#" target="_blank">Sitemap</a><a class="sub-footer-links" target="_blank" href="https://corp.kaltura.com/About-Kaltura">About</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  if (window.lucybot.embed) {
+    document.getElementById('KalturaFooter').remove();
+  }
+</script>
+
+  <script src="dist/vendor.bundle.js"></script> <script src="dist/config.bundle.js"></script> <script src="js/openapi.js"></script> <script src="js/external.js"></script> <script src="dist/app.bundle.js"></script> <script src="assets/kaltura.js"></script>  </body></html>
