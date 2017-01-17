@@ -1,4 +1,4 @@
-<html> <head> <base href="/"> <title>Kaltura VPaaS API</title> <link href=dist/vendor.css rel=stylesheet> <link href=css/external.css rel=stylesheet> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" , name=viewport> <script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> </head> <body> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:4px;width:0}</style> <div id=LoadingIndicator> <div id=LoadingIndicatorProgress class=bg-primary></div> </div> <script> if (!window.location.href.match(/[?&]prerender=[^f0]/)) {
+<html> <head> <base href="/kaltura-recipes-v3/"> <title>Kaltura VPaaS API</title> <link href=dist/vendor.css rel=stylesheet> <link href=css/external.css rel=stylesheet> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" , name=viewport> <script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}console.log("init lucybot"),window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> </head> <body> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:4px;width:0}</style> <div id=LoadingIndicator> <div id=LoadingIndicatorProgress class=bg-primary></div> </div> <script> if (!window.location.href.match(/[?&]prerender=[^f0]/)) {
       var totalTime = 5000;
       var curPct = 0;
       var interval = setInterval(function() {
@@ -143,7 +143,7 @@
           <a href="/console">API Console</a>
         </li>
         <li class="navbar-link">
-          <a href="/api-docs/#/Client%20Libraries">Client Libraries</a>
+          <a href="/api-docs/Client_Libraries">Client Libraries</a>
         </li>
         <li class="navbar-link">
           <a href="/workflows">Interactive Workflows</a>
@@ -205,12 +205,14 @@ if (!window.location.href.match(/\/workflows/)) {
 }
 
 if (!keepNav) {
-  document.getElementById('KalturaNav').remove();
+  var elem = document.getElementById('KalturaNav');
+  if (elem) elem.remove();
 } else {
   document.getElementsByTagName('body')[0].className += ' spaced-for-kaltura-nav';
 }
 if (!keepSidebar) {
-  document.getElementById('KalturaSidebar').remove();
+  var elem = document.getElementById('KalturaSidebar');
+  if (elem) elem.remove();
 } else {
   document.getElementsByTagName('body')[0].className += ' spaced-for-kaltura-sidebar';
 }
@@ -268,7 +270,8 @@ if (!keepSidebar) {
 
 <script>
   if (window.lucybot.embed) {
-    document.getElementById('KalturaFooter').remove();
+    var elem = document.getElementById('KalturaFooter');
+    if (elem) elem.remove();
   }
 </script>
 
