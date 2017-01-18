@@ -1,38 +1,38 @@
-<html><head> <base href="/kaltura-recipes-v3/"> <title>Kaltura VPaaS API</title> <link href="dist/vendor.css" rel="stylesheet"> <link href="css/external.css" rel="stylesheet"> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" ,="" name="viewport"> <script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <style>side-menu[_ngcontent-sys-3] {
+<html><head> <base href="/kaltura-recipes-v3/"> <title>Kaltura VPaaS API</title> <link href="dist/vendor.css" rel="stylesheet"> <link href="css/external.css" rel="stylesheet"> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" ,="" name="viewport"> <script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <style>side-menu[_ngcontent-cxm-3] {
         display: block;
         margin-top: 21px;
       }</style><style>@media (max-width: 767px) {
-        .menu-items[_ngcontent-sys-9] {
+        .menu-items[_ngcontent-cxm-9] {
           padding: 10px;
           border: 1px solid #ccc;
           border-top: none;
         }
       }
-      side-menu-item[_ngcontent-sys-9] {
+      side-menu-item[_ngcontent-cxm-9] {
         display: block;
       }
-      .btn.visible-xs[_ngcontent-sys-9] {
+      .btn.visible-xs[_ngcontent-cxm-9] {
         margin-top: 15px;
-      }</style><style>side-menu-item[_ngcontent-sys-10] {
+      }</style><style>side-menu-item[_ngcontent-cxm-10] {
         display: block;
       }
-      .side-menu-item[_ngcontent-sys-10] {
+      .side-menu-item[_ngcontent-cxm-10] {
         display: inline-block;
         width: 100%;
         white-space: nowrap;
         margin-top: 8px;
         position: relative;
       }
-      .side-menu-item[_ngcontent-sys-10], .side-menu-children[_ngcontent-sys-10] {
+      .side-menu-item[_ngcontent-cxm-10], .side-menu-children[_ngcontent-cxm-10] {
         padding-left: 14px;
       }
-      .fa-ellipsis-v[_ngcontent-sys-10] {
+      .fa-ellipsis-v[_ngcontent-cxm-10] {
         position: absolute;
         left: 0px;
         top: 3px;
       }
 
-      .title[_ngcontent-sys-10] {
+      .title[_ngcontent-cxm-10] {
         display: inline-block;
         width: 100%;
         white-space: normal;
@@ -40,122 +40,122 @@
         text-overflow: ellipsis;
         line-height: 18px;
       }
-      .title.truncate[_ngcontent-sys-10] {
+      .title.truncate[_ngcontent-cxm-10] {
         white-space: nowrap;
       }
-      .title.active[_ngcontent-sys-10] {
+      .title.active[_ngcontent-cxm-10] {
         text-decoration: none;
       }
-      .title.inactive[_ngcontent-sys-10] {
+      .title.inactive[_ngcontent-cxm-10] {
         color: inherit;
-      }</style><style>side-menu[_ngcontent-sys-4] {
+      }</style><style>side-menu[_ngcontent-cxm-4] {
         display: block;
         margin-top: 21px;
-      }</style><style>api-response[_ngcontent-sys-15] {
+      }</style><style>api-response[_ngcontent-cxm-15] {
         display: block;
         margin-top: 30px;
       }
-      .parameters-title[_ngcontent-sys-15], .parameters-box[_ngcontent-sys-15] {
+      .parameters-title[_ngcontent-cxm-15], .parameters-box[_ngcontent-cxm-15] {
         border: 1px solid #d9d9d9;
         padding: 15px;
         background-color: #f5f5f5;
       }
-      .parameters-title[_ngcontent-sys-15] {
+      .parameters-title[_ngcontent-cxm-15] {
         border-bottom: none;
         margin-bottom: -2px;
         background-color: #fff;
       }
-      .parameters-box[_ngcontent-sys-15] {
+      .parameters-box[_ngcontent-cxm-15] {
         border: 1px solid #d9d9d9;
         border-top: none;
         border-radius: 4px;
         margin-bottom: 20px;
         padding-top: 0px;
-      }</style><style>.global-parameters[_ngcontent-sys-19]   .global-parameter[_ngcontent-sys-19] {
+      }</style><style>.global-parameters[_ngcontent-cxm-19]   .global-parameter[_ngcontent-cxm-19] {
       padding-left: 15px;
-    }</style><style>.sample-code-title[_ngcontent-sys-16], .sample-code-box[_ngcontent-sys-16] {
+    }</style><style>.sample-code-title[_ngcontent-cxm-16], .sample-code-box[_ngcontent-cxm-16] {
   border: 1px solid #d9d9d9;
 }
-.sample-code-title[_ngcontent-sys-16] {
+.sample-code-title[_ngcontent-cxm-16] {
   padding: 15px;
   border-bottom: none;
   margin-bottom: -2px;
   background-color: #fff;
 }
-.sample-code-box[_ngcontent-sys-16] {
+.sample-code-box[_ngcontent-cxm-16] {
   border: 1px solid #d9d9d9;
   border-top: none;
   border-radius: 4px;
 }
-.sample-code-box[_ngcontent-sys-16]   pre.hljs[_ngcontent-sys-16] {
+.sample-code-box[_ngcontent-cxm-16]   pre.hljs[_ngcontent-cxm-16] {
   border: none;
   margin-bottom: 0px;
 }
-.sample-code-box[_ngcontent-sys-16]   pre[_ngcontent-sys-16]    > code[_ngcontent-sys-16] {
+.sample-code-box[_ngcontent-cxm-16]   pre[_ngcontent-cxm-16]    > code[_ngcontent-cxm-16] {
   white-space: pre;
 }
-.show-setup-checkbox[_ngcontent-sys-16] {
+.show-setup-checkbox[_ngcontent-cxm-16] {
   display: block;
 }
-.show-setup-checkbox[_ngcontent-sys-16]   input[_ngcontent-sys-16] {
+.show-setup-checkbox[_ngcontent-cxm-16]   input[_ngcontent-cxm-16] {
   margin-right: 8px;
-}</style><style>.parameter[_ngcontent-sys-18] {
+}</style><style>.parameter[_ngcontent-cxm-18] {
   margin-bottom: 15px;
 }
 
-.dropdown[_ngcontent-sys-18]    > a[_ngcontent-sys-18] {
+.dropdown[_ngcontent-cxm-18]    > a[_ngcontent-cxm-18] {
   width: 100%;
 }
 
-input[type="file"][_ngcontent-sys-18] {
+input[type="file"][_ngcontent-cxm-18] {
   display: none;
 }
 
-.input-group-btn[_ngcontent-sys-18]   .btn[_ngcontent-sys-18] {
+.input-group-btn[_ngcontent-cxm-18]   .btn[_ngcontent-cxm-18] {
   max-width: 100px;
   text-overflow: ellipsis;
   overflow-x: hidden;
 }
 
-.description[_ngcontent-sys-18]   p[_ngcontent-sys-18] {
+.description[_ngcontent-cxm-18]   p[_ngcontent-cxm-18] {
   margin-bottom: 0px;
-}</style><style>.try-it-button[_ngcontent-sys-8] {
+}</style><style>.try-it-button[_ngcontent-cxm-8] {
       margin-bottom: 30px;
     }
-    .try-it[_ngcontent-sys-8] {
+    .try-it[_ngcontent-cxm-8] {
       padding: 15px;
       background-color: #f7f7f7;
     }
-    .nav-tabs[_ngcontent-sys-8] {
+    .nav-tabs[_ngcontent-cxm-8] {
       margin-bottom: 15px;
     }
-    .status-code-tabs[_ngcontent-sys-8] {
+    .status-code-tabs[_ngcontent-cxm-8] {
       font-weight: bold;
     }
-    .parameter[_ngcontent-sys-8] {
+    .parameter[_ngcontent-cxm-8] {
       margin-bottom: 20px;
     }
-    .parameter-details[_ngcontent-sys-8] {
+    .parameter-details[_ngcontent-cxm-8] {
       padding-left: 15px;
-    }</style><style>subschema[_ngcontent-sys-13] {
+    }</style><style>subschema[_ngcontent-cxm-13] {
       display: block;
-    }</style><style>subschema[_ngcontent-sys-14] {
+    }</style><style>subschema[_ngcontent-cxm-14] {
         display: block;
         margin-left: 10px;
       }
-      .sibling-group[_ngcontent-sys-14]    > schema[_ngcontent-sys-14] {
+      .sibling-group[_ngcontent-cxm-14]    > schema[_ngcontent-cxm-14] {
         margin-left: 0px;
       }
-      .sibling-group[_ngcontent-sys-14]   h5[_ngcontent-sys-14] {
+      .sibling-group[_ngcontent-cxm-14]   h5[_ngcontent-cxm-14] {
         font-weight: normal;
         font-style: italic;
       }
-      .enum[_ngcontent-sys-14], .description[_ngcontent-sys-14] {
+      .enum[_ngcontent-cxm-14], .description[_ngcontent-cxm-14] {
         padding-left: 10px;
       }
-      [_nghost-sys-14]     subschema .description p {
+      [_nghost-cxm-14]     subschema .description p {
         margin-bottom: 0px;
-      }</style><style>.parameters[_ngcontent-sys-20] {
+      }</style><style>.parameters[_ngcontent-cxm-20] {
         padding-left: 15px;
       }</style></head> <body class=" spaced-for-kaltura-nav"> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:2px;width:0}</style> <div id="LoadingIndicator"> <div id="LoadingIndicatorProgress" class="bg-primary"></div> </div> <script> if (!window.location.href.match(/[?&]prerender=[^f0]/)) {
       var totalTime = 5000;
@@ -653,376 +653,376 @@ if (!keepSidebar) {
 </script>
 
  <app class="loading" ng-version="2.4.3">
-      <router-outlet></router-outlet><documentation _nghost-sys-3=""><div _ngcontent-sys-3="" class="container-fluid main-container" id="Documentation"><div _ngcontent-sys-3="" class="row"><div _ngcontent-sys-3="" class="col-xs-12 col-sm-4 col-md-3 side-menu-col"><side-menu _ngcontent-sys-3="" basepage="documentation" _nghost-sys-9="">
-      <div _ngcontent-sys-9="" class="side-menu">
-        <div _ngcontent-sys-9="" class="input-group input-group-sm">
-          <input _ngcontent-sys-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text">
-          <span _ngcontent-sys-9="" class="input-group-btn">
-            <!--template bindings={}--><a _ngcontent-sys-9="" class="btn btn-default">
+      <router-outlet></router-outlet><documentation _nghost-cxm-3=""><div _ngcontent-cxm-3="" class="container-fluid main-container" id="Documentation"><div _ngcontent-cxm-3="" class="row"><div _ngcontent-cxm-3="" class="col-xs-12 col-sm-4 col-md-3 side-menu-col"><side-menu _ngcontent-cxm-3="" basepage="documentation" _nghost-cxm-9="">
+      <div _ngcontent-cxm-9="" class="side-menu">
+        <div _ngcontent-cxm-9="" class="input-group input-group-sm">
+          <input _ngcontent-cxm-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text">
+          <span _ngcontent-cxm-9="" class="input-group-btn">
+            <!--template bindings={}--><a _ngcontent-cxm-9="" class="btn btn-default">
               &nbsp;
-              <i _ngcontent-sys-9="" class="fa fa-search"></i>
+              <i _ngcontent-cxm-9="" class="fa fa-search"></i>
               &nbsp;
             </a>
             <!--template bindings={}-->
           </span>
         </div>
-        <a _ngcontent-sys-9="" class="btn btn-primary visible-xs">
-          <span _ngcontent-sys-9="">Navigate</span>
-          <i _ngcontent-sys-9="" class="fa fa-right fa-caret-down"></i>
+        <a _ngcontent-cxm-9="" class="btn btn-primary visible-xs">
+          <span _ngcontent-cxm-9="">Navigate</span>
+          <i _ngcontent-cxm-9="" class="fa fa-right fa-caret-down"></i>
         </a>
-        <div _ngcontent-sys-9="" class="menu-items hidden-xs">
-          <!--template bindings={}--><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Overview">
-          <span _ngcontent-sys-10="">Overview</span>
-        </a>
-      </div>
-      <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Client_Libraries">
-          <span _ngcontent-sys-10="">Client Libraries</span>
+        <div _ngcontent-cxm-9="" class="menu-items hidden-xs">
+          <!--template bindings={}--><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Overview">
+          <span _ngcontent-cxm-10="">Overview</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/XML_Schemas">
-          <span _ngcontent-sys-10="">XML Schemas</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Client_Libraries">
+          <span _ngcontent-cxm-10="">Client Libraries</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Generate_API_Sessions">
-          <span _ngcontent-sys-10="">Generate API Sessions</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/XML_Schemas">
+          <span _ngcontent-cxm-10="">XML Schemas</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Ingest_and_Upload_Media">
-          <span _ngcontent-sys-10="">Ingest and Upload Media</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Generate_API_Sessions">
+          <span _ngcontent-cxm-10="">Generate API Sessions</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Execute_Bulk_Ingest_and_Updates">
-          <span _ngcontent-sys-10="">Execute Bulk Ingest and Updates</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Ingest_and_Upload_Media">
+          <span _ngcontent-cxm-10="">Ingest and Upload Media</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Convert_and_Transcode_Media">
-          <span _ngcontent-sys-10="">Convert and Transcode Media</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Execute_Bulk_Ingest_and_Updates">
+          <span _ngcontent-cxm-10="">Execute Bulk Ingest and Updates</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Live_Stream_and_Broadcast">
-          <span _ngcontent-sys-10="">Live Stream and Broadcast</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Convert_and_Transcode_Media">
+          <span _ngcontent-cxm-10="">Convert and Transcode Media</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata">
-          <span _ngcontent-sys-10="">Enrich and Organize Metadata</span>
-        </a>
-      </div>
-      <!--template bindings={}--><div _ngcontent-sys-10="" class="side-menu-children">
-        <!--template bindings={}--><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/baseEntry">
-          <span _ngcontent-sys-10="">baseEntry</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Live_Stream_and_Broadcast">
+          <span _ngcontent-cxm-10="">Live Stream and Broadcast</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/category">
-          <span _ngcontent-sys-10="">category</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata">
+          <span _ngcontent-cxm-10="">Enrich and Organize Metadata</span>
+        </a>
+      </div>
+      <!--template bindings={}--><div _ngcontent-cxm-10="" class="side-menu-children">
+        <!--template bindings={}--><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/baseEntry">
+          <span _ngcontent-cxm-10="">baseEntry</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/categoryEntry">
-          <span _ngcontent-sys-10="">categoryEntry</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/category">
+          <span _ngcontent-cxm-10="">category</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/categoryUser">
-          <span _ngcontent-sys-10="">categoryUser</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/categoryEntry">
+          <span _ngcontent-cxm-10="">categoryEntry</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/metadata">
-          <span _ngcontent-sys-10="">metadata</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/categoryUser">
+          <span _ngcontent-cxm-10="">categoryUser</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/metadataProfile">
-          <span _ngcontent-sys-10="">metadataProfile</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/metadata">
+          <span _ngcontent-cxm-10="">metadata</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionAsset">
-          <span _ngcontent-sys-10="">captionAsset</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/metadataProfile">
+          <span _ngcontent-cxm-10="">metadataProfile</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams">
-          <span _ngcontent-sys-10="">captionParams</span>
-        </a>
-      </div>
-      <!--template bindings={}--><div _ngcontent-sys-10="" class="side-menu-children">
-        <!--template bindings={}--><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_add">
-          <span _ngcontent-sys-10="">captionParams.add</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionAsset">
+          <span _ngcontent-cxm-10="">captionAsset</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_delete">
-          <span _ngcontent-sys-10="">captionParams.delete</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams">
+          <span _ngcontent-cxm-10="">captionParams</span>
+        </a>
+      </div>
+      <!--template bindings={}--><div _ngcontent-cxm-10="" class="side-menu-children">
+        <!--template bindings={}--><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_add">
+          <span _ngcontent-cxm-10="">captionParams.add</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_get">
-          <span _ngcontent-sys-10="">captionParams.get</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_delete">
+          <span _ngcontent-cxm-10="">captionParams.delete</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_list">
-          <span _ngcontent-sys-10="">captionParams.list</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_get">
+          <span _ngcontent-cxm-10="">captionParams.get</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
-        <a _ngcontent-sys-10="" class="title truncate active" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_update">
-          <span _ngcontent-sys-10="">captionParams.update</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title truncate inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_list">
+          <span _ngcontent-cxm-10="">captionParams.list</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item>
-      </div>
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionAssetItem">
-          <span _ngcontent-sys-10="">captionAssetItem</span>
-        </a>
-      </div>
-      <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/attachmentAsset">
-          <span _ngcontent-sys-10="">attachmentAsset</span>
-        </a>
-      </div>
-      <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/thumbAsset">
-          <span _ngcontent-sys-10="">thumbAsset</span>
-        </a>
-      </div>
-      <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/thumbParams">
-          <span _ngcontent-sys-10="">thumbParams</span>
-        </a>
-      </div>
-      <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/tag">
-          <span _ngcontent-sys-10="">tag</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-cxm-10="" class="title truncate active" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionParams/captionParams_update">
+          <span _ngcontent-cxm-10="">captionParams.update</span>
         </a>
       </div>
       <!--template bindings={}-->
     </side-menu-item>
       </div>
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Search_Discover_and_Personalize">
-          <span _ngcontent-sys-10="">Search, Discover and Personalize</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/captionAssetItem">
+          <span _ngcontent-cxm-10="">captionAssetItem</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Engage_and_Publish">
-          <span _ngcontent-sys-10="">Engage and Publish</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/attachmentAsset">
+          <span _ngcontent-cxm-10="">attachmentAsset</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Review_Media_Analytics">
-          <span _ngcontent-sys-10="">Review Media Analytics</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/thumbAsset">
+          <span _ngcontent-cxm-10="">thumbAsset</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Deliver_and_Distribute_Media">
-          <span _ngcontent-sys-10="">Deliver and Distribute Media</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/thumbParams">
+          <span _ngcontent-cxm-10="">thumbParams</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Secure_Control_and_Govern">
-          <span _ngcontent-sys-10="">Secure, Control and Govern</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-10="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata/tag">
+          <span _ngcontent-cxm-10="">tag</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Optimize_API_Requests">
-          <span _ngcontent-sys-10="">Optimize API Requests</span>
+    </side-menu-item>
+      </div>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Search_Discover_and_Personalize">
+          <span _ngcontent-cxm-10="">Search, Discover and Personalize</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks">
-          <span _ngcontent-sys-10="">Integration, Scheduling and Hooks</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Engage_and_Publish">
+          <span _ngcontent-cxm-10="">Engage and Publish</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Encrypt_and_License_Content">
-          <span _ngcontent-sys-10="">Encrypt and License Content</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Review_Media_Analytics">
+          <span _ngcontent-cxm-10="">Review Media Analytics</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Documents_and_Other_Assets">
-          <span _ngcontent-sys-10="">Manage Documents and Other Assets</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Deliver_and_Distribute_Media">
+          <span _ngcontent-cxm-10="">Deliver and Distribute Media</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_and_Deliver_Apps_and_Widgets">
-          <span _ngcontent-sys-10="">Manage and Deliver Apps and Widgets</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Secure_Control_and_Govern">
+          <span _ngcontent-cxm-10="">Secure, Control and Govern</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Backend_and_Storage">
-          <span _ngcontent-sys-10="">Manage Backend and Storage</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Optimize_API_Requests">
+          <span _ngcontent-cxm-10="">Optimize API Requests</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/General_Objects">
-          <span _ngcontent-sys-10="">General Objects</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks">
+          <span _ngcontent-cxm-10="">Integration, Scheduling and Hooks</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
-      <div _ngcontent-sys-10="" class="side-menu-item hidden-xs">
-        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Error_Codes">
-          <span _ngcontent-sys-10="">Error Codes</span>
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Encrypt_and_License_Content">
+          <span _ngcontent-cxm-10="">Encrypt and License Content</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Documents_and_Other_Assets">
+          <span _ngcontent-cxm-10="">Manage Documents and Other Assets</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_and_Deliver_Apps_and_Widgets">
+          <span _ngcontent-cxm-10="">Manage and Deliver Apps and Widgets</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Backend_and_Storage">
+          <span _ngcontent-cxm-10="">Manage Backend and Storage</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/General_Objects">
+          <span _ngcontent-cxm-10="">General Objects</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-cxm-9="" _nghost-cxm-10="">
+      <div _ngcontent-cxm-10="" class="side-menu-item hidden-xs">
+        <i _ngcontent-cxm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-cxm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Error_Codes">
+          <span _ngcontent-cxm-10="">Error Codes</span>
         </a>
       </div>
       <!--template bindings={}-->
     </side-menu-item>
         </div>
-        <hr _ngcontent-sys-9="" class="visible-xs">
+        <hr _ngcontent-cxm-9="" class="visible-xs">
       </div>
-    </side-menu></div><div _ngcontent-sys-3="" class="col-xs-12 col-sm-8 col-md-9"><h3 _ngcontent-sys-3="" class="breadcrumbs"><span _ngcontent-sys-3="">Documentation</span><!--template bindings={}--><span _ngcontent-sys-3=""><i _ngcontent-sys-3="" class="fa fa-chevron-right"></i><span _ngcontent-sys-3="">captionParams.update</span></span><!--template bindings={}--></h3><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-3="" class="docs-body"><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-3="" class="docs-operation"><operation-documentation _ngcontent-sys-3="" _nghost-sys-8=""><div _ngcontent-sys-8="" class="route-description"><p>Update Caption Params by ID</p>
-</div><a _ngcontent-sys-8="" class="btn btn-primary try-it-button">Try it out</a><!--template bindings={}--><div _ngcontent-sys-8="" class="row"><div _ngcontent-sys-8="" class="col-xs-12 col-md-6"><h4 _ngcontent-sys-8="">Parameters</h4><p _ngcontent-sys-8="" hidden=""><i _ngcontent-sys-8="">This operation has no parameters.</i></p><ul _ngcontent-sys-8="" class="nav nav-tabs location-tabs"><!--template bindings={}--><li _ngcontent-sys-8="" role="presentation" class="active"><a _ngcontent-sys-8="" class="text-capitalize">query</a></li></ul><parameter-set _ngcontent-sys-8="" _nghost-sys-19=""><!--template bindings={}--><div _ngcontent-sys-19="" class="global-parameters"><label _ngcontent-sys-19="">Global</label><a _ngcontent-sys-19="" class="btn btn-sm btn-link"><i _ngcontent-sys-19="" class="fa fa-left fa-plus-square-o"></i><span _ngcontent-sys-19="">Show</span></a><div _ngcontent-sys-19="" class="help-block" hidden="">These parameters are valid for any operation</div><!--template bindings={}--><parameter _ngcontent-sys-19="" class="gloabal-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">format:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>The format of the response</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">1</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (JSON)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">2</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (XML)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">3</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (PHP)</span></i></li></ul></div></div></div></div></parameter></div><!--template bindings={}--><parameter-group _ngcontent-sys-19="" _nghost-sys-20=""><!--template bindings={}--><div _ngcontent-sys-20=""><span _ngcontent-sys-20="" class="hljs-attr">captionParams</span><label _ngcontent-sys-20="" hidden="">captionParams</label><a _ngcontent-sys-20="" class="btn btn-sm btn-link"><i _ngcontent-sys-20="" class="fa fa-left fa-plus-square-o"></i><span _ngcontent-sys-20="">Show</span></a><div _ngcontent-sys-20="" class="help-block" hidden=""><p>Object Type: <code>KalturaCaptionParams</code></p>
-</div><div _ngcontent-sys-20="" class="parameters"><!--template bindings={}--><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[partnerId]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description" hidden=""></div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[name]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>The name of the Flavor Params</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[systemName]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>System name of the Flavor Params</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[description]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>The description of the Flavor Params</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[tags]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>The Flavor Params tags are used to identify the flavor for different usage (e.g. web, hd, mobile)</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[sourceRemoteStorageProfileId]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Id of remote storage profile that used to get the source, zero indicates Kaltura data center</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[remoteStorageProfileIds]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Comma seperated ids of remote storage profiles that the flavor distributed to, the distribution done by the conversion engine</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[mediaParserType]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Enum Type: <code>KalturaMediaParserType</code></p>
+    </side-menu></div><div _ngcontent-cxm-3="" class="col-xs-12 col-sm-8 col-md-9"><h3 _ngcontent-cxm-3="" class="breadcrumbs"><span _ngcontent-cxm-3="">Documentation</span><!--template bindings={}--><span _ngcontent-cxm-3=""><i _ngcontent-cxm-3="" class="fa fa-chevron-right"></i><span _ngcontent-cxm-3="">captionParams.update</span></span><!--template bindings={}--></h3><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-3="" class="docs-body"><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-3="" class="docs-operation"><operation-documentation _ngcontent-cxm-3="" _nghost-cxm-8=""><div _ngcontent-cxm-8="" class="route-description"><p>Update Caption Params by ID</p>
+</div><a _ngcontent-cxm-8="" class="btn btn-primary try-it-button">Try it out</a><!--template bindings={}--><div _ngcontent-cxm-8="" class="row"><div _ngcontent-cxm-8="" class="col-xs-12 col-md-6"><h4 _ngcontent-cxm-8="">Parameters</h4><p _ngcontent-cxm-8="" hidden=""><i _ngcontent-cxm-8="">This operation has no parameters.</i></p><ul _ngcontent-cxm-8="" class="nav nav-tabs location-tabs"><!--template bindings={}--><li _ngcontent-cxm-8="" role="presentation" class="active"><a _ngcontent-cxm-8="" class="text-capitalize">query</a></li></ul><parameter-set _ngcontent-cxm-8="" _nghost-cxm-19=""><!--template bindings={}--><div _ngcontent-cxm-19="" class="global-parameters"><label _ngcontent-cxm-19="">Global</label><a _ngcontent-cxm-19="" class="btn btn-sm btn-link"><i _ngcontent-cxm-19="" class="fa fa-left fa-plus-square-o"></i><span _ngcontent-cxm-19="">Show</span></a><div _ngcontent-cxm-19="" class="help-block" hidden="">These parameters are valid for any operation</div><!--template bindings={}--><parameter _ngcontent-cxm-19="" class="gloabal-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">format:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>The format of the response</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">1</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (JSON)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">2</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (XML)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">3</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (PHP)</span></i></li></ul></div></div></div></div></parameter></div><!--template bindings={}--><parameter-group _ngcontent-cxm-19="" _nghost-cxm-20=""><!--template bindings={}--><div _ngcontent-cxm-20=""><span _ngcontent-cxm-20="" class="hljs-attr">captionParams</span><label _ngcontent-cxm-20="" hidden="">captionParams</label><a _ngcontent-cxm-20="" class="btn btn-sm btn-link"><i _ngcontent-cxm-20="" class="fa fa-left fa-plus-square-o"></i><span _ngcontent-cxm-20="">Show</span></a><div _ngcontent-cxm-20="" class="help-block" hidden=""><p>Object Type: <code>KalturaCaptionParams</code></p>
+</div><div _ngcontent-cxm-20="" class="parameters"><!--template bindings={}--><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[partnerId]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description" hidden=""></div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[name]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>The name of the Flavor Params</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[systemName]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>System name of the Flavor Params</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[description]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>The description of the Flavor Params</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[tags]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>The Flavor Params tags are used to identify the flavor for different usage (e.g. web, hd, mobile)</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[sourceRemoteStorageProfileId]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Id of remote storage profile that used to get the source, zero indicates Kaltura data center</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[remoteStorageProfileIds]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Comma seperated ids of remote storage profiles that the flavor distributed to, the distribution done by the conversion engine</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[mediaParserType]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Enum Type: <code>KalturaMediaParserType</code></p>
 <p>Media parser type to be used for post-conversion validation</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">0</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (MEDIAINFO)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">remoteMediaInfo.RemoteMediaInfo</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (REMOTE_MEDIAINFO)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">1</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (FFMPEG)</span></i></li></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[sourceAssetParamsIds]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Comma seperated ids of source flavor params this flavor is created from</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[language]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p><code>insertOnly</code></p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">0</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (MEDIAINFO)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">remoteMediaInfo.RemoteMediaInfo</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (REMOTE_MEDIAINFO)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">1</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (FFMPEG)</span></i></li></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[sourceAssetParamsIds]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Comma seperated ids of source flavor params this flavor is created from</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[language]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p><code>insertOnly</code></p>
 <p>Enum Type: <code>KalturaLanguage</code></p>
 <p>The language of the caption content</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Abkhazian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Afar</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Afrikaans</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Albanian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Amharic</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Arabic</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Armenian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Assamese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Aymara</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Azerbaijani</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Bashkir</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Basque</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Bengali (Bangla)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Bhutani</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Bihari</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Bislama</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Breton</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Bulgarian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Burmese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Byelorussian (Belarusian)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Cambodian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Catalan</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Chinese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Corsican</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Croatian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Czech</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Danish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Dutch</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">English</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">English (American)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">English (British)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Esperanto</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Estonian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Faeroese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Farsi</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Fiji</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Finnish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">French</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Frisian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Gaelic (Manx)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Gaelic (Scottish)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Galician</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Georgian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">German</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Greek</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Greenlandic</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Guarani</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Gujarati</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Hausa</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Hindi</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Hungarian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Icelandic</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Interlingua</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Interlingue</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Inuktitut</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Inupiak</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Irish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Italian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Japanese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Javanese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kannada</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kashmiri</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kazakh</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kinyarwanda (Ruanda)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kirghiz</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kirundi (Rundi)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Korean</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Kurdish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Laothian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Latin</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Latvian (Lettish)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Limburgish ( Limburger)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Lingala</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Lithuanian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Macedonian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Malagasy</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Malay</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Malayalam</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Maltese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Maori</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Marathi</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Moldavian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Mongolian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Multilingual</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Nauru</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Nepali</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Norwegian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Occitan</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Oriya</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Oromo (Afan, Galla)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Pashto (Pushto)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Polish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Portuguese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Punjabi</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Quechua</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Rhaeto-Romance</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Romanian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Russian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Samoan</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Sangro</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Sanskrit</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Serbian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Serbo-Croatian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Sesotho</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Setswana</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Shona</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Sindhi</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Sinhalese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Siswati</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Slovak</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Slovenian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Somali</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Spanish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Sundanese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Swahili (Kiswahili)</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Swedish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tagalog</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tajik</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tamil</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tatar</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Telugu</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Thai</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tibetan</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tigrinya</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tonga</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Tsonga</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Turkish</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Turkmen</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Twi</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Uighur</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Ukrainian</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Urdu</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Uzbek</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Vietnamese</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Volapuk</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Welsh</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Wolof</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Xhosa</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Yoruba</span><!--template bindings={}--></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">Zulu</span><!--template bindings={}--></li></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[isDefault]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Enum Type: <code>KalturaNullableBoolean</code></p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Abkhazian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Afar</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Afrikaans</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Albanian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Amharic</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Arabic</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Armenian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Assamese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Aymara</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Azerbaijani</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Bashkir</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Basque</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Bengali (Bangla)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Bhutani</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Bihari</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Bislama</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Breton</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Bulgarian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Burmese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Byelorussian (Belarusian)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Cambodian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Catalan</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Chinese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Corsican</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Croatian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Czech</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Danish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Dutch</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">English</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">English (American)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">English (British)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Esperanto</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Estonian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Faeroese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Farsi</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Fiji</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Finnish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">French</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Frisian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Gaelic (Manx)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Gaelic (Scottish)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Galician</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Georgian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">German</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Greek</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Greenlandic</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Guarani</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Gujarati</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Hausa</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Hindi</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Hungarian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Icelandic</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Interlingua</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Interlingue</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Inuktitut</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Inupiak</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Irish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Italian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Japanese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Javanese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kannada</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kashmiri</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kazakh</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kinyarwanda (Ruanda)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kirghiz</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kirundi (Rundi)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Korean</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Kurdish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Laothian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Latin</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Latvian (Lettish)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Limburgish ( Limburger)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Lingala</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Lithuanian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Macedonian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Malagasy</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Malay</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Malayalam</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Maltese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Maori</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Marathi</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Moldavian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Mongolian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Multilingual</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Nauru</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Nepali</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Norwegian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Occitan</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Oriya</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Oromo (Afan, Galla)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Pashto (Pushto)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Polish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Portuguese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Punjabi</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Quechua</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Rhaeto-Romance</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Romanian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Russian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Samoan</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Sangro</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Sanskrit</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Serbian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Serbo-Croatian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Sesotho</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Setswana</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Shona</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Sindhi</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Sinhalese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Siswati</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Slovak</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Slovenian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Somali</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Spanish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Sundanese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Swahili (Kiswahili)</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Swedish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tagalog</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tajik</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tamil</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tatar</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Telugu</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Thai</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tibetan</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tigrinya</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tonga</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Tsonga</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Turkish</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Turkmen</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Twi</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Uighur</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Ukrainian</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Urdu</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Uzbek</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Vietnamese</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Volapuk</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Welsh</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Wolof</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Xhosa</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Yoruba</span><!--template bindings={}--></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">Zulu</span><!--template bindings={}--></li></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[isDefault]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Enum Type: <code>KalturaNullableBoolean</code></p>
 <p>Is default caption asset of the entry</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">-1</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (NULL_VALUE)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">0</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (FALSE_VALUE)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">1</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (TRUE_VALUE)</span></i></li></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[label]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Friendly label</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[format]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">string</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p><code>insertOnly</code></p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">-1</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (NULL_VALUE)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">0</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (FALSE_VALUE)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">1</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (TRUE_VALUE)</span></i></li></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[label]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Friendly label</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[format]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">string</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p><code>insertOnly</code></p>
 <p>Enum Type: <code>KalturaCaptionType</code></p>
 <p>The caption format</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">1</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (SRT)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">2</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (DFXP)</span></i></li><li _ngcontent-sys-18=""><span _ngcontent-sys-18="">3</span><!--template bindings={}--><i _ngcontent-sys-18=""><span _ngcontent-sys-18=""> (WEBVTT)</span></i></li></ul></div></div></div></div></parameter><parameter _ngcontent-sys-20="" class="grouped-parameter" _nghost-sys-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">captionParams[sourceParamsId]:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description"><p>Id of the caption params or the flavor params to be used as source for the caption creation</p>
-</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><!--template bindings={}--></div></div></parameter-group><!--template bindings={}--><parameter _ngcontent-sys-19="" class="ungrouped-parameter" _nghost-sys-18=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" class="parameter"><div _ngcontent-sys-18="" class="parameter-title"><span _ngcontent-sys-18="" class="parameter-name hljs-attr">id:</span><span _ngcontent-sys-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-sys-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-sys-18="" class="parameter-details"><div _ngcontent-sys-18="" class="description" hidden=""></div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-18="" hidden=""></div><div _ngcontent-sys-18="" hidden="">Allowed values are:<div _ngcontent-sys-18="" class="enum-list"><ul _ngcontent-sys-18=""><!--template bindings={}--></ul></div></div></div></div></parameter></parameter-set></div><div _ngcontent-sys-8="" class="col-xs-12 col-md-6"><h4 _ngcontent-sys-8="">Responses</h4><ul _ngcontent-sys-8="" class="nav nav-tabs status-code-tabs"><!--template bindings={}--><li _ngcontent-sys-8="" role="presentation" class="active"><a _ngcontent-sys-8=""><span _ngcontent-sys-8="" class="text-success">200</span></a></li></ul><div _ngcontent-sys-8=""><p>Success</p>
-</div><!--template bindings={}--><div _ngcontent-sys-8="" class="response-schema hide-code"><schema _ngcontent-sys-8="" _nghost-sys-13=""><div _ngcontent-sys-13="" class="form-group"><div _ngcontent-sys-13="" class="btn-group"><a _ngcontent-sys-13="" class="btn btn-default active">Schema</a><a _ngcontent-sys-13="" class="btn btn-default">Example</a></div></div><pre _ngcontent-sys-13="" class="hljs" hidden=""><code _ngcontent-sys-13="">{
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">1</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (SRT)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">2</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (DFXP)</span></i></li><li _ngcontent-cxm-18=""><span _ngcontent-cxm-18="">3</span><!--template bindings={}--><i _ngcontent-cxm-18=""><span _ngcontent-cxm-18=""> (WEBVTT)</span></i></li></ul></div></div></div></div></parameter><parameter _ngcontent-cxm-20="" class="grouped-parameter" _nghost-cxm-18="" hidden=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">captionParams[sourceParamsId]:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description"><p>Id of the caption params or the flavor params to be used as source for the caption creation</p>
+</div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter><!--template bindings={}--></div></div></parameter-group><!--template bindings={}--><parameter _ngcontent-cxm-19="" class="ungrouped-parameter" _nghost-cxm-18=""><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" class="parameter"><div _ngcontent-cxm-18="" class="parameter-title"><span _ngcontent-cxm-18="" class="parameter-name hljs-attr">id:</span><span _ngcontent-cxm-18="" class="parameter-type hljs-string">integer</span><i _ngcontent-cxm-18="" hidden="">&nbsp;&nbsp;required</i></div><div _ngcontent-cxm-18="" class="parameter-details"><div _ngcontent-cxm-18="" class="description" hidden=""></div><!--template bindings={}--><!--template bindings={}--><div _ngcontent-cxm-18="" hidden=""></div><div _ngcontent-cxm-18="" hidden="">Allowed values are:<div _ngcontent-cxm-18="" class="enum-list"><ul _ngcontent-cxm-18=""><!--template bindings={}--></ul></div></div></div></div></parameter></parameter-set></div><div _ngcontent-cxm-8="" class="col-xs-12 col-md-6"><h4 _ngcontent-cxm-8="">Responses</h4><ul _ngcontent-cxm-8="" class="nav nav-tabs status-code-tabs"><!--template bindings={}--><li _ngcontent-cxm-8="" role="presentation" class="active"><a _ngcontent-cxm-8=""><span _ngcontent-cxm-8="" class="text-success">200</span></a></li></ul><div _ngcontent-cxm-8=""><p>Success</p>
+</div><!--template bindings={}--><div _ngcontent-cxm-8="" class="response-schema hide-code"><schema _ngcontent-cxm-8="" _nghost-cxm-13=""><div _ngcontent-cxm-13="" class="form-group"><div _ngcontent-cxm-13="" class="btn-group"><a _ngcontent-cxm-13="" class="btn btn-default active">Schema</a><a _ngcontent-cxm-13="" class="btn btn-default">Example</a></div></div><pre _ngcontent-cxm-13="" class="hljs" hidden=""><code _ngcontent-cxm-13="">{
   <span class="hljs-attr">"createdAt"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"description"</span>: <span class="hljs-string">""</span>,
   <span class="hljs-attr">"id"</span>: <span class="hljs-number">0</span>,
@@ -1045,17 +1045,17 @@ if (!keepSidebar) {
   <span class="hljs-attr">"label"</span>: <span class="hljs-string">""</span>,
   <span class="hljs-attr">"language"</span>: <span class="hljs-string">"Abkhazian"</span>,
   <span class="hljs-attr">"sourceParamsId"</span>: <span class="hljs-number">0</span>
-}</code></pre><subschema _ngcontent-sys-13="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">object</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-sys-14=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-sys-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-sys-14="" class="description" hidden=""></div><!--template bindings={}--><subschema _ngcontent-sys-14="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-name hljs-attr">format:</span><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">string</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-sys-14="" hidden=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-sys-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-sys-14="" class="enum"><span _ngcontent-sys-14="">Enum: 1, 2, 3</span></div><div _ngcontent-sys-14="" class="description"><p><code>insertOnly</code></p>
+}</code></pre><subschema _ngcontent-cxm-13="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">object</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-cxm-14=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-cxm-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-cxm-14="" class="description" hidden=""></div><!--template bindings={}--><subschema _ngcontent-cxm-14="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-name hljs-attr">format:</span><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">string</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-cxm-14="" hidden=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-cxm-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-cxm-14="" class="enum"><span _ngcontent-cxm-14="">Enum: 1, 2, 3</span></div><div _ngcontent-cxm-14="" class="description"><p><code>insertOnly</code></p>
 <p>Enum Type: <code>KalturaCaptionType</code></p>
 <p>The caption format</p>
-</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-sys-14="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-name hljs-attr">isDefault:</span><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">integer</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-sys-14="" hidden=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-sys-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-sys-14="" class="enum"><span _ngcontent-sys-14="">Enum: -1, 0, 1</span></div><div _ngcontent-sys-14="" class="description"><p>Enum Type: <code>KalturaNullableBoolean</code></p>
+</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-cxm-14="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-name hljs-attr">isDefault:</span><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">integer</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-cxm-14="" hidden=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-cxm-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-cxm-14="" class="enum"><span _ngcontent-cxm-14="">Enum: -1, 0, 1</span></div><div _ngcontent-cxm-14="" class="description"><p>Enum Type: <code>KalturaNullableBoolean</code></p>
 <p>Is default caption asset of the entry</p>
-</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-sys-14="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-name hljs-attr">label:</span><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">string</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-sys-14="" hidden=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-sys-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-sys-14="" class="description"><p>Friendly label</p>
-</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-sys-14="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-name hljs-attr">language:</span><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">string</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-sys-14="" hidden=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-sys-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-sys-14="" class="enum"><span _ngcontent-sys-14="">Enum: Abkhazian, Afar, Afrikaans, Albanian, Amharic, Arabic, Armenian, Assamese, Aymara, Azerbaijani, Bashkir, Basque, Bengali (Bangla), Bhutani, Bihari, Bislama, Breton, Bulgarian, Burmese, Byelorussian (Belarusian), Cambodian, Catalan, Chinese, Corsican, Croatian, Czech, Danish, Dutch, English, English (American), English (British), Esperanto, Estonian, Faeroese, Farsi, Fiji, Finnish, French, Frisian, Gaelic (Manx), Gaelic (Scottish), Galician, Georgian, German, Greek, Greenlandic, Guarani, Gujarati, Hausa, Hindi, Hungarian, Icelandic, Interlingua, Interlingue, Inuktitut, Inupiak, Irish, Italian, Japanese, Javanese, Kannada, Kashmiri, Kazakh, Kinyarwanda (Ruanda), Kirghiz, Kirundi (Rundi), Korean, Kurdish, Laothian, Latin, Latvian (Lettish), Limburgish ( Limburger), Lingala, Lithuanian, Macedonian, Malagasy, Malay, Malayalam, Maltese, Maori, Marathi, Moldavian, Mongolian, Multilingual, Nauru, Nepali, Norwegian, Occitan, Oriya, Oromo (Afan, Galla), Pashto (Pushto), Polish, Portuguese, Punjabi, Quechua, Rhaeto-Romance, Romanian, Russian, Samoan, Sangro, Sanskrit, Serbian, Serbo-Croatian, Sesotho, Setswana, Shona, Sindhi, Sinhalese, Siswati, Slovak, Slovenian, Somali, Spanish, Sundanese, Swahili (Kiswahili), Swedish, Tagalog, Tajik, Tamil, Tatar, Telugu, Thai, Tibetan, Tigrinya, Tonga, Tsonga, Turkish, Turkmen, Twi, Uighur, Ukrainian, Urdu, Uzbek, Vietnamese, Volapuk, Welsh, Wolof, Xhosa, Yoruba, Zulu</span></div><div _ngcontent-sys-14="" class="description"><p><code>insertOnly</code></p>
+</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-cxm-14="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-name hljs-attr">label:</span><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">string</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-cxm-14="" hidden=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-cxm-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-cxm-14="" class="description"><p>Friendly label</p>
+</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-cxm-14="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-name hljs-attr">language:</span><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">string</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-cxm-14="" hidden=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-cxm-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-cxm-14="" class="enum"><span _ngcontent-cxm-14="">Enum: Abkhazian, Afar, Afrikaans, Albanian, Amharic, Arabic, Armenian, Assamese, Aymara, Azerbaijani, Bashkir, Basque, Bengali (Bangla), Bhutani, Bihari, Bislama, Breton, Bulgarian, Burmese, Byelorussian (Belarusian), Cambodian, Catalan, Chinese, Corsican, Croatian, Czech, Danish, Dutch, English, English (American), English (British), Esperanto, Estonian, Faeroese, Farsi, Fiji, Finnish, French, Frisian, Gaelic (Manx), Gaelic (Scottish), Galician, Georgian, German, Greek, Greenlandic, Guarani, Gujarati, Hausa, Hindi, Hungarian, Icelandic, Interlingua, Interlingue, Inuktitut, Inupiak, Irish, Italian, Japanese, Javanese, Kannada, Kashmiri, Kazakh, Kinyarwanda (Ruanda), Kirghiz, Kirundi (Rundi), Korean, Kurdish, Laothian, Latin, Latvian (Lettish), Limburgish ( Limburger), Lingala, Lithuanian, Macedonian, Malagasy, Malay, Malayalam, Maltese, Maori, Marathi, Moldavian, Mongolian, Multilingual, Nauru, Nepali, Norwegian, Occitan, Oriya, Oromo (Afan, Galla), Pashto (Pushto), Polish, Portuguese, Punjabi, Quechua, Rhaeto-Romance, Romanian, Russian, Samoan, Sangro, Sanskrit, Serbian, Serbo-Croatian, Sesotho, Setswana, Shona, Sindhi, Sinhalese, Siswati, Slovak, Slovenian, Somali, Spanish, Sundanese, Swahili (Kiswahili), Swedish, Tagalog, Tajik, Tamil, Tatar, Telugu, Thai, Tibetan, Tigrinya, Tonga, Tsonga, Turkish, Turkmen, Twi, Uighur, Ukrainian, Urdu, Uzbek, Vietnamese, Volapuk, Welsh, Wolof, Xhosa, Yoruba, Zulu</span></div><div _ngcontent-cxm-14="" class="description"><p><code>insertOnly</code></p>
 <p>Enum Type: <code>KalturaLanguage</code></p>
 <p>The language of the caption content</p>
-</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-sys-14="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-name hljs-attr">sourceParamsId:</span><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">integer</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-sys-14="" hidden=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-sys-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-sys-14="" class="description"><p>Id of the caption params or the flavor params to be used as source for the caption creation</p>
-</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><!--template bindings={}--><div _ngcontent-sys-14="" class="sibling-group"><h5 _ngcontent-sys-14=""><span _ngcontent-sys-14="" class="hljs-keyword"></span><span _ngcontent-sys-14=""> must also match all of:</span></h5><!--template bindings={}--><subschema _ngcontent-sys-14="" _nghost-sys-14=""><span _ngcontent-sys-14="" class="title-line"><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-type hljs-string"><span _ngcontent-sys-14="">object</span><!--template bindings={}--></span><!--template bindings={}--><span _ngcontent-sys-14="" class="schema-title hljs-keyword">:KalturaAssetParams</span><a _ngcontent-sys-14=""><i _ngcontent-sys-14="" class="fa fa-right fa-caret-left"></i></a></span><!--template bindings={}--></subschema></div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema></schema></div></div></div></operation-documentation></div><!--template bindings={}--></div></div></div></div></documentation>
+</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><subschema _ngcontent-cxm-14="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-name hljs-attr">sourceParamsId:</span><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">integer</span><!--template bindings={}--></span><!--template bindings={}--><a _ngcontent-cxm-14="" hidden=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-down"></i></a></span><!--template bindings={}--><div _ngcontent-cxm-14="" class="schema-details"><!--template bindings={}--><div _ngcontent-cxm-14="" class="description"><p>Id of the caption params or the flavor params to be used as source for the caption creation</p>
+</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema><!--template bindings={}--><div _ngcontent-cxm-14="" class="sibling-group"><h5 _ngcontent-cxm-14=""><span _ngcontent-cxm-14="" class="hljs-keyword"></span><span _ngcontent-cxm-14=""> must also match all of:</span></h5><!--template bindings={}--><subschema _ngcontent-cxm-14="" _nghost-cxm-14=""><span _ngcontent-cxm-14="" class="title-line"><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-type hljs-string"><span _ngcontent-cxm-14="">object</span><!--template bindings={}--></span><!--template bindings={}--><span _ngcontent-cxm-14="" class="schema-title hljs-keyword">:KalturaAssetParams</span><a _ngcontent-cxm-14=""><i _ngcontent-cxm-14="" class="fa fa-right fa-caret-left"></i></a></span><!--template bindings={}--></subschema></div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--></div></subschema></schema></div></div></div></operation-documentation></div><!--template bindings={}--></div></div></div></div></documentation>
       </app> <div id="KalturaFooter" class="w-section footer-section">
   <div class="w-container container footer-container">
     <div class="row">
