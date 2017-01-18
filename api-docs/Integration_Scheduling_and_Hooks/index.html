@@ -1,38 +1,38 @@
-<html><head> <base href="/kaltura-recipes-v3/"> <title>Kaltura VPaaS API</title> <link href="dist/vendor.css" rel="stylesheet"> <link href="css/external.css" rel="stylesheet"> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" ,="" name="viewport"> <script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <style>side-menu[_ngcontent-ytm-3] {
+<html><head> <base href="/kaltura-recipes-v3/"> <title>Kaltura VPaaS API</title> <link href="dist/vendor.css" rel="stylesheet"> <link href="css/external.css" rel="stylesheet"> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" ,="" name="viewport"> <script type="text/javascript" async="" src="//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script><script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <style>side-menu[_ngcontent-sys-3] {
         display: block;
         margin-top: 21px;
       }</style><style>@media (max-width: 767px) {
-        .menu-items[_ngcontent-ytm-9] {
+        .menu-items[_ngcontent-sys-9] {
           padding: 10px;
           border: 1px solid #ccc;
           border-top: none;
         }
       }
-      side-menu-item[_ngcontent-ytm-9] {
+      side-menu-item[_ngcontent-sys-9] {
         display: block;
       }
-      .btn.visible-xs[_ngcontent-ytm-9] {
+      .btn.visible-xs[_ngcontent-sys-9] {
         margin-top: 15px;
-      }</style><style>side-menu-item[_ngcontent-ytm-10] {
+      }</style><style>side-menu-item[_ngcontent-sys-10] {
         display: block;
       }
-      .side-menu-item[_ngcontent-ytm-10] {
+      .side-menu-item[_ngcontent-sys-10] {
         display: inline-block;
         width: 100%;
         white-space: nowrap;
         margin-top: 8px;
         position: relative;
       }
-      .side-menu-item[_ngcontent-ytm-10], .side-menu-children[_ngcontent-ytm-10] {
+      .side-menu-item[_ngcontent-sys-10], .side-menu-children[_ngcontent-sys-10] {
         padding-left: 14px;
       }
-      .fa-ellipsis-v[_ngcontent-ytm-10] {
+      .fa-ellipsis-v[_ngcontent-sys-10] {
         position: absolute;
         left: 0px;
         top: 3px;
       }
 
-      .title[_ngcontent-ytm-10] {
+      .title[_ngcontent-sys-10] {
         display: inline-block;
         width: 100%;
         white-space: normal;
@@ -40,73 +40,122 @@
         text-overflow: ellipsis;
         line-height: 18px;
       }
-      .title.truncate[_ngcontent-ytm-10] {
+      .title.truncate[_ngcontent-sys-10] {
         white-space: nowrap;
       }
-      .title.active[_ngcontent-ytm-10] {
+      .title.active[_ngcontent-sys-10] {
         text-decoration: none;
       }
-      .title.inactive[_ngcontent-ytm-10] {
+      .title.inactive[_ngcontent-sys-10] {
         color: inherit;
-      }</style><style>.try-it-button[_ngcontent-ytm-8] {
-      margin-bottom: 30px;
-    }
-    .try-it[_ngcontent-ytm-8] {
-      padding: 15px;
-      background-color: #f7f7f7;
-    }
-    .nav-tabs[_ngcontent-ytm-8] {
-      margin-bottom: 15px;
-    }
-    .status-code-tabs[_ngcontent-ytm-8] {
-      font-weight: bold;
-    }
-    .parameter[_ngcontent-ytm-8] {
-      margin-bottom: 20px;
-    }
-    .parameter-details[_ngcontent-ytm-8] {
+      }</style><style>side-menu[_ngcontent-sys-4] {
+        display: block;
+        margin-top: 21px;
+      }</style><style>api-response[_ngcontent-sys-15] {
+        display: block;
+        margin-top: 30px;
+      }
+      .parameters-title[_ngcontent-sys-15], .parameters-box[_ngcontent-sys-15] {
+        border: 1px solid #d9d9d9;
+        padding: 15px;
+        background-color: #f5f5f5;
+      }
+      .parameters-title[_ngcontent-sys-15] {
+        border-bottom: none;
+        margin-bottom: -2px;
+        background-color: #fff;
+      }
+      .parameters-box[_ngcontent-sys-15] {
+        border: 1px solid #d9d9d9;
+        border-top: none;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        padding-top: 0px;
+      }</style><style>.global-parameters[_ngcontent-sys-19]   .global-parameter[_ngcontent-sys-19] {
       padding-left: 15px;
-    }</style><style>.global-parameters[_ngcontent-ytm-19]   .global-parameter[_ngcontent-ytm-19] {
-      padding-left: 15px;
-    }</style><style>.parameter[_ngcontent-ytm-18] {
+    }</style><style>.sample-code-title[_ngcontent-sys-16], .sample-code-box[_ngcontent-sys-16] {
+  border: 1px solid #d9d9d9;
+}
+.sample-code-title[_ngcontent-sys-16] {
+  padding: 15px;
+  border-bottom: none;
+  margin-bottom: -2px;
+  background-color: #fff;
+}
+.sample-code-box[_ngcontent-sys-16] {
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  border-radius: 4px;
+}
+.sample-code-box[_ngcontent-sys-16]   pre.hljs[_ngcontent-sys-16] {
+  border: none;
+  margin-bottom: 0px;
+}
+.sample-code-box[_ngcontent-sys-16]   pre[_ngcontent-sys-16]    > code[_ngcontent-sys-16] {
+  white-space: pre;
+}
+.show-setup-checkbox[_ngcontent-sys-16] {
+  display: block;
+}
+.show-setup-checkbox[_ngcontent-sys-16]   input[_ngcontent-sys-16] {
+  margin-right: 8px;
+}</style><style>.parameter[_ngcontent-sys-18] {
   margin-bottom: 15px;
 }
 
-.dropdown[_ngcontent-ytm-18]    > a[_ngcontent-ytm-18] {
+.dropdown[_ngcontent-sys-18]    > a[_ngcontent-sys-18] {
   width: 100%;
 }
 
-input[type="file"][_ngcontent-ytm-18] {
+input[type="file"][_ngcontent-sys-18] {
   display: none;
 }
 
-.input-group-btn[_ngcontent-ytm-18]   .btn[_ngcontent-ytm-18] {
+.input-group-btn[_ngcontent-sys-18]   .btn[_ngcontent-sys-18] {
   max-width: 100px;
   text-overflow: ellipsis;
   overflow-x: hidden;
 }
 
-.description[_ngcontent-ytm-18]   p[_ngcontent-ytm-18] {
+.description[_ngcontent-sys-18]   p[_ngcontent-sys-18] {
   margin-bottom: 0px;
-}</style><style>subschema[_ngcontent-ytm-13] {
+}</style><style>.try-it-button[_ngcontent-sys-8] {
+      margin-bottom: 30px;
+    }
+    .try-it[_ngcontent-sys-8] {
+      padding: 15px;
+      background-color: #f7f7f7;
+    }
+    .nav-tabs[_ngcontent-sys-8] {
+      margin-bottom: 15px;
+    }
+    .status-code-tabs[_ngcontent-sys-8] {
+      font-weight: bold;
+    }
+    .parameter[_ngcontent-sys-8] {
+      margin-bottom: 20px;
+    }
+    .parameter-details[_ngcontent-sys-8] {
+      padding-left: 15px;
+    }</style><style>subschema[_ngcontent-sys-13] {
       display: block;
-    }</style><style>subschema[_ngcontent-ytm-14] {
+    }</style><style>subschema[_ngcontent-sys-14] {
         display: block;
         margin-left: 10px;
       }
-      .sibling-group[_ngcontent-ytm-14]    > schema[_ngcontent-ytm-14] {
+      .sibling-group[_ngcontent-sys-14]    > schema[_ngcontent-sys-14] {
         margin-left: 0px;
       }
-      .sibling-group[_ngcontent-ytm-14]   h5[_ngcontent-ytm-14] {
+      .sibling-group[_ngcontent-sys-14]   h5[_ngcontent-sys-14] {
         font-weight: normal;
         font-style: italic;
       }
-      .enum[_ngcontent-ytm-14], .description[_ngcontent-ytm-14] {
+      .enum[_ngcontent-sys-14], .description[_ngcontent-sys-14] {
         padding-left: 10px;
       }
-      [_nghost-ytm-14]     subschema .description p {
+      [_nghost-sys-14]     subschema .description p {
         margin-bottom: 0px;
-      }</style><style>.parameters[_ngcontent-ytm-20] {
+      }</style><style>.parameters[_ngcontent-sys-20] {
         padding-left: 15px;
       }</style></head> <body class=" spaced-for-kaltura-nav"> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:2px;width:0}</style> <div id="LoadingIndicator"> <div id="LoadingIndicatorProgress" class="bg-primary"></div> </div> <script> if (!window.location.href.match(/[?&]prerender=[^f0]/)) {
       var totalTime = 5000;
@@ -604,255 +653,255 @@ if (!keepSidebar) {
 </script>
 
  <app class="loading" ng-version="2.4.3">
-      <router-outlet></router-outlet><documentation _nghost-ytm-3=""><div _ngcontent-ytm-3="" class="container-fluid main-container" id="Documentation"><div _ngcontent-ytm-3="" class="row"><div _ngcontent-ytm-3="" class="col-xs-12 col-sm-4 col-md-3 side-menu-col"><side-menu _ngcontent-ytm-3="" basepage="documentation" _nghost-ytm-9="">
-      <div _ngcontent-ytm-9="" class="side-menu">
-        <div _ngcontent-ytm-9="" class="input-group input-group-sm">
-          <input _ngcontent-ytm-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text">
-          <span _ngcontent-ytm-9="" class="input-group-btn">
-            <!--template bindings={}--><a _ngcontent-ytm-9="" class="btn btn-default">
+      <router-outlet></router-outlet><documentation _nghost-sys-3=""><div _ngcontent-sys-3="" class="container-fluid main-container" id="Documentation"><div _ngcontent-sys-3="" class="row"><div _ngcontent-sys-3="" class="col-xs-12 col-sm-4 col-md-3 side-menu-col"><side-menu _ngcontent-sys-3="" basepage="documentation" _nghost-sys-9="">
+      <div _ngcontent-sys-9="" class="side-menu">
+        <div _ngcontent-sys-9="" class="input-group input-group-sm">
+          <input _ngcontent-sys-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text">
+          <span _ngcontent-sys-9="" class="input-group-btn">
+            <!--template bindings={}--><a _ngcontent-sys-9="" class="btn btn-default">
               &nbsp;
-              <i _ngcontent-ytm-9="" class="fa fa-search"></i>
+              <i _ngcontent-sys-9="" class="fa fa-search"></i>
               &nbsp;
             </a>
             <!--template bindings={}-->
           </span>
         </div>
-        <a _ngcontent-ytm-9="" class="btn btn-primary visible-xs">
-          <span _ngcontent-ytm-9="">Hide Navigation</span>
-          <i _ngcontent-ytm-9="" class="fa fa-right fa-caret-up"></i>
+        <a _ngcontent-sys-9="" class="btn btn-primary visible-xs">
+          <span _ngcontent-sys-9="">Hide Navigation</span>
+          <i _ngcontent-sys-9="" class="fa fa-right fa-caret-up"></i>
         </a>
-        <div _ngcontent-ytm-9="" class="menu-items">
-          <!--template bindings={}--><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Overview">
-          <span _ngcontent-ytm-10="">Overview</span>
-        </a>
-      </div>
-      <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Client_Libraries">
-          <span _ngcontent-ytm-10="">Client Libraries</span>
+        <div _ngcontent-sys-9="" class="menu-items">
+          <!--template bindings={}--><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Overview">
+          <span _ngcontent-sys-10="">Overview</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/XML_Schemas">
-          <span _ngcontent-ytm-10="">XML Schemas</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Client_Libraries">
+          <span _ngcontent-sys-10="">Client Libraries</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Generate_API_Sessions">
-          <span _ngcontent-ytm-10="">Generate API Sessions</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/XML_Schemas">
+          <span _ngcontent-sys-10="">XML Schemas</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Ingest_and_Upload_Media">
-          <span _ngcontent-ytm-10="">Ingest and Upload Media</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Generate_API_Sessions">
+          <span _ngcontent-sys-10="">Generate API Sessions</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Execute_Bulk_Ingest_and_Updates">
-          <span _ngcontent-ytm-10="">Execute Bulk Ingest and Updates</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Ingest_and_Upload_Media">
+          <span _ngcontent-sys-10="">Ingest and Upload Media</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Convert_and_Transcode_Media">
-          <span _ngcontent-ytm-10="">Convert and Transcode Media</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Execute_Bulk_Ingest_and_Updates">
+          <span _ngcontent-sys-10="">Execute Bulk Ingest and Updates</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Live_Stream_and_Broadcast">
-          <span _ngcontent-ytm-10="">Live Stream and Broadcast</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Convert_and_Transcode_Media">
+          <span _ngcontent-sys-10="">Convert and Transcode Media</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata">
-          <span _ngcontent-ytm-10="">Enrich and Organize Metadata</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Live_Stream_and_Broadcast">
+          <span _ngcontent-sys-10="">Live Stream and Broadcast</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Search_Discover_and_Personalize">
-          <span _ngcontent-ytm-10="">Search, Discover and Personalize</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Enrich_and_Organize_Metadata">
+          <span _ngcontent-sys-10="">Enrich and Organize Metadata</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Engage_and_Publish">
-          <span _ngcontent-ytm-10="">Engage and Publish</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Search_Discover_and_Personalize">
+          <span _ngcontent-sys-10="">Search, Discover and Personalize</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Review_Media_Analytics">
-          <span _ngcontent-ytm-10="">Review Media Analytics</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Engage_and_Publish">
+          <span _ngcontent-sys-10="">Engage and Publish</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Deliver_and_Distribute_Media">
-          <span _ngcontent-ytm-10="">Deliver and Distribute Media</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Review_Media_Analytics">
+          <span _ngcontent-sys-10="">Review Media Analytics</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Secure_Control_and_Govern">
-          <span _ngcontent-ytm-10="">Secure, Control and Govern</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Deliver_and_Distribute_Media">
+          <span _ngcontent-sys-10="">Deliver and Distribute Media</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Optimize_API_Requests">
-          <span _ngcontent-ytm-10="">Optimize API Requests</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Secure_Control_and_Govern">
+          <span _ngcontent-sys-10="">Secure, Control and Govern</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
-        <a _ngcontent-ytm-10="" class="title active" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks">
-          <span _ngcontent-ytm-10="">Integration, Scheduling and Hooks</span>
-        </a>
-      </div>
-      <!--template bindings={}--><div _ngcontent-ytm-10="" class="side-menu-children">
-        <!--template bindings={}--><side-menu-item _ngcontent-ytm-10="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/eventNotificationTemplate">
-          <span _ngcontent-ytm-10="">eventNotificationTemplate</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Optimize_API_Requests">
+          <span _ngcontent-sys-10="">Optimize API Requests</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-10="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/scheduledTaskProfile">
-          <span _ngcontent-ytm-10="">scheduledTaskProfile</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary"></i>
+        <a _ngcontent-sys-10="" class="title active" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks">
+          <span _ngcontent-sys-10="">Integration, Scheduling and Hooks</span>
+        </a>
+      </div>
+      <!--template bindings={}--><div _ngcontent-sys-10="" class="side-menu-children">
+        <!--template bindings={}--><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/eventNotificationTemplate">
+          <span _ngcontent-sys-10="">eventNotificationTemplate</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-10="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal">
-          <span _ngcontent-ytm-10="">Scheduling Triggers using iCal</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/scheduledTaskProfile">
+          <span _ngcontent-sys-10="">scheduledTaskProfile</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-10="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/integration">
-          <span _ngcontent-ytm-10="">integration</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal">
+          <span _ngcontent-sys-10="">Scheduling Triggers using iCal</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-10="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/businessProcessCase">
-          <span _ngcontent-ytm-10="">businessProcessCase</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/integration">
+          <span _ngcontent-sys-10="">integration</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-10="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/notification">
-          <span _ngcontent-ytm-10="">notification</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/businessProcessCase">
+          <span _ngcontent-sys-10="">businessProcessCase</span>
+        </a>
+      </div>
+      <!--template bindings={}-->
+    </side-menu-item><side-menu-item _ngcontent-sys-10="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/notification">
+          <span _ngcontent-sys-10="">notification</span>
         </a>
       </div>
       <!--template bindings={}-->
     </side-menu-item>
       </div>
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Encrypt_and_License_Content">
-          <span _ngcontent-ytm-10="">Encrypt and License Content</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Encrypt_and_License_Content">
+          <span _ngcontent-sys-10="">Encrypt and License Content</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Documents_and_Other_Assets">
-          <span _ngcontent-ytm-10="">Manage Documents and Other Assets</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Documents_and_Other_Assets">
+          <span _ngcontent-sys-10="">Manage Documents and Other Assets</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_and_Deliver_Apps_and_Widgets">
-          <span _ngcontent-ytm-10="">Manage and Deliver Apps and Widgets</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_and_Deliver_Apps_and_Widgets">
+          <span _ngcontent-sys-10="">Manage and Deliver Apps and Widgets</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Backend_and_Storage">
-          <span _ngcontent-ytm-10="">Manage Backend and Storage</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Manage_Backend_and_Storage">
+          <span _ngcontent-sys-10="">Manage Backend and Storage</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/General_Objects">
-          <span _ngcontent-ytm-10="">General Objects</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/General_Objects">
+          <span _ngcontent-sys-10="">General Objects</span>
         </a>
       </div>
       <!--template bindings={}-->
-    </side-menu-item><side-menu-item _ngcontent-ytm-9="" _nghost-ytm-10="">
-      <div _ngcontent-ytm-10="" class="side-menu-item">
-        <i _ngcontent-ytm-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
-        <a _ngcontent-ytm-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Error_Codes">
-          <span _ngcontent-ytm-10="">Error Codes</span>
+    </side-menu-item><side-menu-item _ngcontent-sys-9="" _nghost-sys-10="">
+      <div _ngcontent-sys-10="" class="side-menu-item">
+        <i _ngcontent-sys-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i>
+        <a _ngcontent-sys-10="" class="title inactive" href="/kaltura-recipes-v3/api-docs/Error_Codes">
+          <span _ngcontent-sys-10="">Error Codes</span>
         </a>
       </div>
       <!--template bindings={}-->
     </side-menu-item>
         </div>
-        <hr _ngcontent-ytm-9="" class="visible-xs">
+        <hr _ngcontent-sys-9="" class="visible-xs">
       </div>
-    </side-menu></div><div _ngcontent-ytm-3="" class="col-xs-12 col-sm-8 col-md-9"><h3 _ngcontent-ytm-3="" class="breadcrumbs"><span _ngcontent-ytm-3="">Documentation</span><!--template bindings={}--><span _ngcontent-ytm-3=""><i _ngcontent-ytm-3="" class="fa fa-chevron-right"></i><span _ngcontent-ytm-3="">Integration, Scheduling and Hooks</span></span><!--template bindings={}--></h3><!--template bindings={}--><!--template bindings={}--><div _ngcontent-ytm-3="" class="docs-body"><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div _ngcontent-ytm-3="" class="docs-children"><h4 _ngcontent-ytm-3="">Subtopics</h4><ul _ngcontent-ytm-3=""><!--template bindings={}--><li _ngcontent-ytm-3=""><a _ngcontent-ytm-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/eventNotificationTemplate"><span _ngcontent-ytm-3="">eventNotificationTemplate</span></a></li><li _ngcontent-ytm-3=""><a _ngcontent-ytm-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/scheduledTaskProfile"><span _ngcontent-ytm-3="">scheduledTaskProfile</span></a></li><li _ngcontent-ytm-3=""><a _ngcontent-ytm-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal"><span _ngcontent-ytm-3="">Scheduling Triggers using iCal</span></a></li><li _ngcontent-ytm-3=""><a _ngcontent-ytm-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/integration"><span _ngcontent-ytm-3="">integration</span></a></li><li _ngcontent-ytm-3=""><a _ngcontent-ytm-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/businessProcessCase"><span _ngcontent-ytm-3="">businessProcessCase</span></a></li><li _ngcontent-ytm-3=""><a _ngcontent-ytm-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/notification"><span _ngcontent-ytm-3="">notification</span></a></li></ul></div></div></div></div></div></documentation>
+    </side-menu></div><div _ngcontent-sys-3="" class="col-xs-12 col-sm-8 col-md-9"><h3 _ngcontent-sys-3="" class="breadcrumbs"><span _ngcontent-sys-3="">Documentation</span><!--template bindings={}--><span _ngcontent-sys-3=""><i _ngcontent-sys-3="" class="fa fa-chevron-right"></i><span _ngcontent-sys-3="">Integration, Scheduling and Hooks</span></span><!--template bindings={}--></h3><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-3="" class="docs-body"><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div _ngcontent-sys-3="" class="docs-children"><h4 _ngcontent-sys-3="">Subtopics</h4><ul _ngcontent-sys-3=""><!--template bindings={}--><li _ngcontent-sys-3=""><a _ngcontent-sys-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/eventNotificationTemplate"><span _ngcontent-sys-3="">eventNotificationTemplate</span></a></li><li _ngcontent-sys-3=""><a _ngcontent-sys-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/scheduledTaskProfile"><span _ngcontent-sys-3="">scheduledTaskProfile</span></a></li><li _ngcontent-sys-3=""><a _ngcontent-sys-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal"><span _ngcontent-sys-3="">Scheduling Triggers using iCal</span></a></li><li _ngcontent-sys-3=""><a _ngcontent-sys-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/integration"><span _ngcontent-sys-3="">integration</span></a></li><li _ngcontent-sys-3=""><a _ngcontent-sys-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/businessProcessCase"><span _ngcontent-sys-3="">businessProcessCase</span></a></li><li _ngcontent-sys-3=""><a _ngcontent-sys-3="" href="/kaltura-recipes-v3/api-docs/Integration_Scheduling_and_Hooks/notification"><span _ngcontent-sys-3="">notification</span></a></li></ul></div></div></div></div></div></documentation>
       </app> <div id="KalturaFooter" class="w-section footer-section">
   <div class="w-container container footer-container">
     <div class="row">
