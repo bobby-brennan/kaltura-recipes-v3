@@ -150,8 +150,7 @@ Now that you've created a new Media Entry, you need to associate the uploaded vi
   "parameters": [
     {
       "name": "resource[objectType]",
-      "x-consoleDefault": "KalturaUploadedFileTokenResource",
-      "consoleDefault": "KalturaUploadedFileTokenResource"
+      "x-consoleDefault": "KalturaUploadedFileTokenResource"
     },
     {
       "name": "entryId",
