@@ -84,8 +84,7 @@ to img_width * frame_number.
       "custom": true,
       "name": "vid_slices",
       "type": "number",
-      "x-consoleDefault": 10,
-      "consoleDefault": 10
+      "x-consoleDefault": 10
     }
   ]
 }
