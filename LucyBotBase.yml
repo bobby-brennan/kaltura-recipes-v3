@@ -30,9 +30,12 @@ routes:
     title: Kaltura API Documentation
     openapi: kaltura
     navigation: operationNavigation
+    meta:
+      title: "Kaltura VPaaS API Documentation"
+      description: "Full documentation for the Kaltura VPaaS API"
 
   /workflows:
-    ui: gallery
+    ui: workflows
     openapi: kaltura
     navigation: workflowNavigation
     intro: |
@@ -53,6 +56,9 @@ routes:
     openapi: kaltura
     title: Kaltura API Console
     navigation: operationNavigation
+    meta:
+      title: "Kaltura VPaaS API Console"
+      description: "Make test calls to the Kaltura VPaaS API"
 
 operationNavigation:
   - title: "Overview"
