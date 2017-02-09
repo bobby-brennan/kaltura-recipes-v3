@@ -40,15 +40,7 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
     },
     {
       "name": "type",
-      "default": 2,
-      "enum": [
-        0,
-        2
-      ],
-      "x-enumLabels": [
-        "USER",
-        "ADMIN"
-      ]
+      "default": 2
     }
   ]
 }
@@ -61,25 +53,7 @@ You can validate your Kaltura session by calling ```user.get``` without a User I
 ```json
 {
   "method": "get",
-  "path": "/service/user/action/get",
-  "parameters": [
-    {
-      "enum": [
-        1,
-        2,
-        3
-      ],
-      "name": "format",
-      "x-enumLabels": [
-        "JSON",
-        "XML",
-        "PHP"
-      ]
-    },
-    {
-      "name": "userId"
-    }
-  ]
+  "path": "/service/user/action/get"
 }
 ```
 
