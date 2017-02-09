@@ -72,20 +72,7 @@ You can use the Chrome dev tools to turn on device mode and chhose a large table
   "path": "/service/media/action/get",
   "parameters": [
     {
-      "name": "entryId",
-      "dynamicEnum": {
-        "parameters": [
-          {
-            "name": "filter[orderBy]",
-            "value": "-createdAt"
-          }
-        ],
-        "path": "/service/media/action/list",
-        "method": "get",
-        "array": "objects",
-        "value": "id",
-        "label": "name"
-      }
+      "name": "entryId"
     },
     {
       "custom": true,
@@ -154,13 +141,3 @@ kWidget.embed({
 </body>
 </html>
 ```
-
-## Finish
-### Summary
-In this recipe we've learned the following:
-
-* How to inject an external CSS file to the player
-* How to override core player CSS classes
-* How to change CSS classes according to player state
-
-To learn more about custom CSS file injection and player CSS states, read the [player customization](https://vpaas.kaltura.com/documentation/04_Web-Video-Player/Player-Customization.html) article.
