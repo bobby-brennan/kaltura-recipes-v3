@@ -26,7 +26,23 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
 ```json
 {
   "method": "get",
-  "path": "/service/session/action/start"
+  "path": "/service/session/action/start",
+  "parameters": [
+    {
+      "name": "partnerId"
+    },
+    {
+      "name": "userId",
+      "default": "lucybot@example.com"
+    },
+    {
+      "name": "secret"
+    },
+    {
+      "name": "type",
+      "default": 2
+    }
+  ]
 }
 ```
 
@@ -54,7 +70,15 @@ You can then use one of these partnerIds to get a privileged KS.
 ```json
 {
   "method": "get",
-  "path": "/service/user/action/loginByLoginId"
+  "path": "/service/user/action/loginByLoginId",
+  "parameters": [
+    {
+      "name": "loginId"
+    },
+    {
+      "name": "password"
+    }
+  ]
 }
 ```
 
@@ -68,6 +92,7 @@ You can then re-use `user.loginById` with a partnerId to login for as that parti
 {
   "method": "get",
   "path": "/service/partner/action/listPartnersForUser",
+  "parameters": [],
   "ignoreParameters": [
     "format"
   ]
