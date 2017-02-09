@@ -52,6 +52,10 @@ Which type would you like to work with?
       "enum": [
         "emailNotification.Email",
         "httpNotification.Http"
+      ],
+      "enumLabels": [
+        "E-mail Template",
+        "HTTP Template"
       ]
     }
   ]
