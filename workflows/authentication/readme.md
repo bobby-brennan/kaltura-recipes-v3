@@ -40,7 +40,15 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
     },
     {
       "name": "type",
-      "default": 2
+      "default": 2,
+      "enum": [
+        0,
+        2
+      ],
+      "x-enumLabels": [
+        "USER",
+        "ADMIN"
+      ]
     }
   ]
 }
@@ -54,8 +62,23 @@ You can validate your Kaltura session by calling ```user.get``` without a User I
 {
   "method": "get",
   "path": "/service/user/action/get",
-  "ignoreParameters": [
-    "format"
+  "parameters": [
+    {
+      "enum": [
+        1,
+        2,
+        3
+      ],
+      "name": "format",
+      "x-enumLabels": [
+        "JSON",
+        "XML",
+        "PHP"
+      ]
+    },
+    {
+      "name": "userId"
+    }
   ]
 }
 ```
@@ -65,8 +88,6 @@ You can also log in with your Login ID and password by using `user.loginByLoginI
 
 Note that this KS can only be used to retrieve a list of partnerIds.
 You can then use one of these partnerIds to get a privileged KS.
-
-
 
 ### API Call
 ```json
@@ -78,8 +99,7 @@ You can then use one of these partnerIds to get a privileged KS.
       "name": "loginId"
     },
     {
-      "name": "password",
-      "x-inputType": "password"
+      "name": "password"
     }
   ]
 }
@@ -95,9 +115,6 @@ You can then re-use `user.loginById` with a partnerId to login for as that parti
 {
   "method": "get",
   "path": "/service/partner/action/listPartnersForUser",
-  "parameters": [],
-  "ignoreParameters": [
-    "format"
-  ]
+  "parameters": []
 }
 ```
