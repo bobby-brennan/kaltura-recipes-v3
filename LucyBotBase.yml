@@ -18,6 +18,7 @@ codegen:
     - python
     - javascript
     - html
+loadOpenAPISynchronous: true
 github:
   repo: "bobby-brennan/kaltura-recipes-v3"
   client_id: "1b76941133d82f454418"
