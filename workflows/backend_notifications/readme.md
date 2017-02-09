@@ -52,10 +52,6 @@ Which type would you like to work with?
       "enum": [
         "emailNotification.Email",
         "httpNotification.Http"
-      ],
-      "enumLabels": [
-        "E-mail Template",
-        "HTTP Template"
       ]
     }
   ]
@@ -138,7 +134,6 @@ Use the ```KalturaHttpNotificationClientPlugin``` library to parse incoming requ
 ### Sample Code (ruby)
 ```ruby
 puts 'Kaltura Notification:' + params
-
 ```
 ### Sample Code (php)
 ```php
@@ -146,5 +141,4 @@ require_once('lib/KalturaClient.php');
 require_once('lib/KalturaPlugins/KalturaHttpNotificationClientPlugin.php');
 
 $object = unserialize($_POST['data']);
-
 ```
