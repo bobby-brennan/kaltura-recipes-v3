@@ -48,7 +48,6 @@ This combination of filter parameters will search through all of the Kaltura Med
     {
       "name": "filter[advancedSearch][objectType]",
       "default": "KalturaMetadataSearchItem",
-      "hidden": false,
       "x-consoleDefault": "KalturaMetadataSearchItem"
     },
     {
@@ -81,8 +80,6 @@ The following blend chars are configured for the API search.
 These blend characters may be used as delimiters or as characters.
 
 **Note, to treat * and ! as literals, use a backslash. e.g. if name="test!" to search for it, use "test\\!"**
-
- 
 
 ### API Call
 ```json
@@ -195,26 +192,6 @@ Here's how to embed the results in HTML. You can select a skin by setting uiconf
         "-updatedAt",
         "-views"
       ],
-      "enumLabels": [
-        "CREATED_AT_ASC",
-        "DURATION_ASC",
-        "LAST_PLAYED_AT_ASC",
-        "NAME_ASC",
-        "PLAYS_ASC",
-        "RECENT_ASC",
-        "START_DATE_ASC",
-        "UPDATED_AT_ASC",
-        "VIEWS_ASC",
-        "CREATED_AT_DESC",
-        "DURATION_DESC",
-        "LAST_PLAYED_AT_DESC",
-        "NAME_DESC",
-        "PLAYS_DESC",
-        "RECENT_DESC",
-        "START_DATE_DESC",
-        "UPDATED_AT_DESC",
-        "VIEWS_DESC"
-      ],
       "hidden": true,
       "dynamicValue": {
         "fromStep": 0,
@@ -249,7 +226,6 @@ Here's how to embed the results in HTML. You can select a skin by setting uiconf
     </script>
   </div>
 </div>
-
 ```
 
 ## Finish
