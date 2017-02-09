@@ -122,7 +122,25 @@ Now we'll create a Media Entry to hold our video. Use the form below to enter yo
   "path": "/service/media/action/add",
   "parameters": [
     {
-      "name": "entry[mediaType]"
+      "name": "entry[mediaType]",
+      "enum": [
+        1,
+        2,
+        5,
+        201,
+        202,
+        203,
+        204
+      ],
+      "x-enumLabels": [
+        "VIDEO",
+        "IMAGE",
+        "AUDIO",
+        "LIVE_STREAM_FLASH",
+        "LIVE_STREAM_WINDOWS_MEDIA",
+        "LIVE_STREAM_REAL_MEDIA",
+        "LIVE_STREAM_QUICKTIME"
+      ]
     },
     {
       "name": "entry[name]"
@@ -150,7 +168,27 @@ Now that you've created a new Media Entry, you need to associate the uploaded vi
   "parameters": [
     {
       "name": "resource[objectType]",
-      "x-consoleDefault": "KalturaUploadedFileTokenResource"
+      "x-consoleDefault": "KalturaUploadedFileTokenResource",
+      "enum": [
+        "KalturaContentResource",
+        "KalturaAssetParamsResourceContainer",
+        "KalturaAssetsParamsResourceContainers",
+        "KalturaUrlResource",
+        "KalturaDataCenterContentResource",
+        "KalturaAssetResource",
+        "KalturaEntryResource",
+        "KalturaFileSyncResource",
+        "KalturaOperationResource",
+        "KalturaRemoteStorageResources",
+        "KalturaStringResource",
+        "KalturaRemoteStorageResource",
+        "KalturaSshUrlResource",
+        "KalturaDropFolderFileResource",
+        "KalturaServerFileResource",
+        "KalturaUploadedFileResource",
+        "KalturaUploadedFileTokenResource",
+        "KalturaWebcamTokenResource"
+      ]
     },
     {
       "name": "entryId",
@@ -164,6 +202,13 @@ Now that you've created a new Media Entry, you need to associate the uploaded vi
       "dynamicValue": {
         "fromStep": 0,
         "value": "id"
+      },
+      "x-showCondition": {
+        "name": "resource[objectType]",
+        "value": [
+          "KalturaUploadedFileTokenResource",
+          "KalturaWebcamTokenResource"
+        ]
       }
     }
   ]
@@ -201,7 +246,14 @@ You can use kWidget to embed your video in HTML. The video may not be ready for 
         "fromStep": 2,
         "value": "id"
       },
-      "hidden": true
+      "hidden": true,
+      "x-dynamicEnum": {
+        "array": "objects",
+        "label": "name",
+        "method": "get",
+        "path": "/service/media/action/list",
+        "value": "id"
+      }
     }
   ]
 }
