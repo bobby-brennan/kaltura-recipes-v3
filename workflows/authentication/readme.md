@@ -26,8 +26,7 @@ To sign up for a Kaltura VPaaS account, visit [vpaas.kaltura.com](https://vpaas.
 ```json
 {
   "method": "get",
-  "path": "/service/session/action/start",
-  "ignoreParameters": []
+  "path": "/service/session/action/start"
 }
 ```
 
@@ -55,8 +54,7 @@ You can then use one of these partnerIds to get a privileged KS.
 ```json
 {
   "method": "get",
-  "path": "/service/user/action/loginByLoginId",
-  "ignoreParameters": []
+  "path": "/service/user/action/loginByLoginId"
 }
 ```
 
