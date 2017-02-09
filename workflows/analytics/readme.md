@@ -87,6 +87,31 @@ You can set reportType to any of the [KalturaReportTypes](https://github.com/kal
         "23",
         "24",
         "25"
+      ],
+      "enumLabels": [
+        "TOP_CONTENT",
+        "CONTENT_DROPOFF",
+        "CONTENT_INTERACTIONS",
+        "MAP_OVERLAY",
+        "TOP_CONTRIBUTORS",
+        "TOP_SYNDICATION",
+        "CONTENT_CONTRIBUTIONS",
+        "USER_ENGAGEMENT",
+        "SPEFICIC_USER_ENGAGEMENT",
+        "USER_TOP_CONTENT",
+        "USER_CONTENT_DROPOFF",
+        "USER_CONTENT_INTERACTIONS",
+        "APPLICATIONS",
+        "USER_USAGE",
+        "SPECIFIC_USER_USAGE",
+        "PARTNER_USAGE",
+        "VAR_USAGE",
+        "TOP_CREATORS",
+        "PLATFORMS",
+        "OPERATION_SYSTEM",
+        "BROWSERS",
+        "LIVE",
+        "TOP_PLAYBACK_CONTEXT"
       ]
     },
     {
