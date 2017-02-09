@@ -133,6 +133,7 @@ var language_opts = {
       return capitalize(replaceActionSuffix(s));
     },
     rewriteType: function(s) {
+      if (s.indexOf('Kaltura') === 0) return s.substring('Kaltura'.length);
       if (s === 'integer') return 'int';
       return s;
     }
@@ -174,11 +175,27 @@ var CodeTemplate = module.exports = function(opts) {
   }
 }
 
+const getDefName = (ref) => {
+  return ref.substring('#/definitions/'.length);
+}
+
 CodeTemplate.prototype.render = function(input) {
   var self = this;
   var pathParts = input.path.match(/(\/service\/(\w+)\/action\/(\w+))$/);
+  this.currentInput = input;
   input.path = pathParts[1];
   input.operation = this.swagger.paths[input.path][input.method];
+  let responseSchema = input.operation.responses[200].schema;
+  if (responseSchema) {
+    if (responseSchema.$ref) responseSchema = this.swagger.definitions[getDefName(responseSchema.$ref)];
+    input.responseType = this.rewriteType(responseSchema.title);
+    if (responseSchema.title.match(/ListResponse$/)) {
+      let items = responseSchema.properties.objects.items;
+      if (items.$ref) items = this.swagger.definitions[getDefName(items.$ref)];
+      input.responseListType = this.rewriteType(items.title);
+    }
+    input.responseType = this.rewriteType(responseSchema.title);
+  }
   input.action = this.rewriteAction(pathParts[3]);
   input.serviceID = pathParts[2];
   input.serviceName = input.operation.tags[0];
@@ -189,24 +206,21 @@ CodeTemplate.prototype.render = function(input) {
     input.plugins.push(tag['x-plugin']);
   }
   input.parameters = [];
-  if (input.operation['x-parameterGroups']) {
-    input.parameters = input.parameters.concat(input.operation['x-parameterGroups'].map(g => {
-      let schema = g.schema;
-      if (g.schema.$ref) {
-        let title = g.schema.$ref ? g.schema.$ref.substring('#/definitions/'.length) : g.schema.title;
-        schema = this.swagger.definitions[title];
-        schema.title = title;
-      }
-      return {
-        schema,
-        name: g.name,
-      }
-    }));
-  }
-  input.parameters = input.parameters.concat(
-    input.operation.parameters
-      .filter(p => !p.$ref && p.name.indexOf('[') === -1)
-      .map(p => ({name: p.name, schema: p.schema || p})));
+  let addedParameters = [];
+  input.operation.parameters.forEach(p => {
+    if (p.$ref || p.name === 'format') return;
+    let baseName = p.name.indexOf('[') === -1 ? p.name : p.name.substring(0, p.name.indexOf('['));
+    if (addedParameters.indexOf(baseName) !== -1) return;
+    addedParameters.push(baseName);
+    if (baseName === p.name) {
+      input.parameters.push({name: p.name, schema: p.schema || p})
+    } else {
+      let group = input.operation['x-parameterGroups'].filter(g => g.name === p['x-group'])[0];
+      let title = group.schema.title || getDefName(group.schema.$ref);
+      let schema = this.swagger.definitions[title];
+      input.parameters.push({name: group.name, schema});
+    }
+  })
   input.parameterNames = input.parameters.map(p => p.name).map(n => this.rewriteVariable(n));
   input.answers = input.answers || {};
   input.answers.secret = input.answers.secret || 'YOUR_KALTURA_SECRET';
@@ -232,9 +246,9 @@ CodeTemplate.prototype.assignAllParameters = function(params, answers, indent) {
   return this.indent(params.map(p => this.assignment(p, answers)).join('\n'), indent);
 }
 
-CodeTemplate.prototype.assignment = function(param, answers) {
+CodeTemplate.prototype.assignment = function(param, answers, parentDef) {
   var self = this;
-  let assignment = this.lvalue(param, answers) + ' = ' + this.rvalue(param, answers) + this.statementSuffix;
+  let assignment = this.lvalue(param, answers) + ' = ' + this.rvalue(param, answers, parentDef) + this.statementSuffix;
   const findSubschema = (subParamName, schema) => {
     if (schema.$ref) schema = this.swagger.definitions[schema.$ref.substring('#/definitions/'.length)];
     let propName = subParamName.split(/\[/).map(s => s.replace(/\]/g, '')).pop();
@@ -263,7 +277,7 @@ CodeTemplate.prototype.assignment = function(param, answers) {
     subsetters = subsetters
       .filter(prop => prop.schema)
       .map(function(prop) {
-        return self.assignment(prop, answers);
+        return self.assignment(prop, answers, param.schema.title);
       });
     assignment = ([assignment]).concat(subsetters).join('\n');
   }
@@ -302,7 +316,7 @@ CodeTemplate.prototype.lvalue = function(param, answers) {
   return lvalue;
 }
 
-CodeTemplate.prototype.rvalue = function(param, answers) {
+CodeTemplate.prototype.rvalue = function(param, answers, parentDef) {
   var self = this;
   let enm = param.schema.enum;
   let enumLabels = param.schema['x-enumLabels'];
@@ -311,6 +325,13 @@ CodeTemplate.prototype.rvalue = function(param, answers) {
     enm = param.schema.oneOf.map(sub => sub.enum[0])
     enumLabels = param.schema.oneOf.map(sub => sub.title);
     enumType = param.schema.title;
+  } else if (param.name.match(/\[orderBy\]/) && parentDef) {
+    enumType = parentDef.replace(/Filter$/, 'OrderBy');
+    let enumDef = this.swagger['x-enums'][enumType];
+    if (enumDef) {
+      enm = enumDef.oneOf.map(s => s.enum[0]);
+      enumLabels = enumDef.oneOf.map(s => s.title);
+    }
   }
   let answer = answers[param.name];
   if (answer === undefined) {
@@ -319,15 +340,15 @@ CodeTemplate.prototype.rvalue = function(param, answers) {
 
   if (!isPrimitiveSchema(param.schema)) {
     if (param.name.indexOf('[objectType]') !== -1) {
-      return self.objPrefix + answer + self.objSuffix;
+      return self.objPrefix + self.rewriteType(answer) + self.objSuffix;
     } else {
-      return self.objPrefix + param.schema.title + self.objSuffix;
+      return self.objPrefix + self.rewriteType(param.schema.title) + self.objSuffix;
     }
   } else {
     if (enm && enumLabels) {
       let enumName = enumLabels[enm.indexOf(answer)];
       if (enumName) {
-        return self.enumPrefix + enumType + (self.enumAccessor || self.accessor) + enumName;
+        return self.enumPrefix + self.rewriteType(enumType) + (self.enumAccessor || self.accessor) + enumName;
       }
     }
     return self.constant(answer);
