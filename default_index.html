@@ -217,8 +217,9 @@ if (!keepSidebar) {
 
  </body> <script src=dist/vendor.bundle.js></script> <script src=dist/config.bundle.js></script> <script> if (window.config.loadOpenAPISynchronous) {
       for (let name in window.config.openapi) {
+        let firstVersion = window.config.openapi[name][0];
         window.jquery.ajax({
-          url: 'openapi/' + name + '.openapi.json',
+          url: 'openapi/' + name + '.' + firstVersion.label.replace(/W+/g, '_') + '.openapi.json',
           async: false,
           dataType: 'json',
           success: function (response) {

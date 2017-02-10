@@ -1,10 +1,10 @@
 <!DOCTYPE html><html><head> <base href="/"> <title>Scheduling Triggers using iCal - Kaltura VPaaS API Documentation</title> <link href="dist/vendor.css" rel="stylesheet"> <link href="css/external.css" rel="stylesheet"> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" ,="" name="viewport"> <script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.openapi={},window.lucybot.prerender=checkBooleanQueryParam("prerender"),window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <script src="assets/mixpanel.js"></script>
 <script src="assets/jaco.js"></script>
-<script src="assets/kaltura.js"></script> <style>side-menu-item[_ngcontent-urr-9] {
+<script src="assets/kaltura.js"></script> <style>side-menu-item[_ngcontent-yqn-9] {
   display: block;
 }
 
-.show-menu-button[_ngcontent-urr-9] {
+.show-menu-button[_ngcontent-yqn-9] {
   height: 50px;
   width: 50px;
   border-radius: 25px;
@@ -12,50 +12,55 @@
   padding-top: 13px;
 }
 
-.menu-heading[_ngcontent-urr-9] {
+.menu-heading[_ngcontent-yqn-9] {
   margin-top: 0px;
   font-weight: bold;
 }
 
-.close-menu-button[_ngcontent-urr-9]   a[_ngcontent-urr-9] {
+.close-menu-button[_ngcontent-yqn-9]   a[_ngcontent-yqn-9] {
   color: #999;
 }
 
-.show-menu-mobile-button[_ngcontent-urr-9] {
+.show-menu-mobile-button[_ngcontent-yqn-9] {
   margin-top: 15px;
-  margin-bottom: 15px;
   width: 100%;
 }
 
-.side-menu[_ngcontent-urr-9] {
+.side-menu[_ngcontent-yqn-9] {
   padding: 15px;
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 5px #888888;
 }
 
-.side-menu[_ngcontent-urr-9], .show-menu-button[_ngcontent-urr-9] {
-  margin-top: 21px;
-}</style><meta name="title" content="Scheduling Triggers using iCal - Kaltura VPaaS API Documentation"><meta name="og:title" content="Scheduling Triggers using iCal - Kaltura VPaaS API Documentation"><meta name="description" content="Full documentation for the Kaltura VPaaS API"><meta name="og:description" content="Full documentation for the Kaltura VPaaS API"><style>side-menu-item[_ngcontent-urr-10] {
+@media (min-width: 768px) {
+  .side-menu[_ngcontent-yqn-9], .show-menu-button[_ngcontent-yqn-9] {
+    margin-top: 21px;
+    box-shadow: 2px 2px 5px #888888;
+  }
+}</style><meta name="title" content="Scheduling Triggers using iCal - Kaltura VPaaS API Documentation"><meta name="og:title" content="Scheduling Triggers using iCal - Kaltura VPaaS API Documentation"><meta name="description" content="Scheduling
+The Scheduling API is used for managing automated schedules for features such as lecture recordings. The API supports scheduling events and resource, managing event resources, and managing metadata of related recordings.
+"><meta name="og:description" content="Scheduling
+The Scheduling API is used for managing automated schedules for features such as lecture recordings. The API supports scheduling events and resource, managing event resources, and managing metadata of related recordings.
+"><style>side-menu-item[_ngcontent-yqn-10] {
   display: block;
 }
-.side-menu-item[_ngcontent-urr-10] {
+.side-menu-item[_ngcontent-yqn-10] {
   display: inline-block;
   width: 100%;
   white-space: nowrap;
   margin-top: 8px;
   position: relative;
 }
-.side-menu-item[_ngcontent-urr-10], .side-menu-children[_ngcontent-urr-10] {
+.side-menu-item[_ngcontent-yqn-10], .side-menu-children[_ngcontent-yqn-10] {
   padding-left: 14px;
 }
 
-.fa-ellipsis-v[_ngcontent-urr-10] {
+.fa-ellipsis-v[_ngcontent-yqn-10] {
   position: absolute;
   left: 0px;
   top: 3px;
 }
 
-.title[_ngcontent-urr-10] {
+.title[_ngcontent-yqn-10] {
   display: inline-block;
   width: 100%;
   white-space: normal;
@@ -63,118 +68,123 @@
   text-overflow: ellipsis;
   line-height: 18px;
 }
-.title.truncate[_ngcontent-urr-10] {
+.title.truncate[_ngcontent-yqn-10] {
   white-space: nowrap;
 }
-.title.active[_ngcontent-urr-10] {
+.title.active[_ngcontent-yqn-10] {
   text-decoration: none;
 }
-.title.inactive[_ngcontent-urr-10] {
+.title.inactive[_ngcontent-yqn-10] {
   color: inherit;
-}</style><style>.tour-button[_ngcontent-urr-4] {
+}</style><style>.tour-button[_ngcontent-yqn-4] {
         position: fixed;
         bottom: 0;
         right: 0;
         border-radius: 0px;
         z-index: 10;
-      }</style><style>api-response[_ngcontent-urr-15] {
+      }</style><style>api-response[_ngcontent-yqn-15] {
         display: block;
       }
-      .parameters-title[_ngcontent-urr-15], .parameters-box[_ngcontent-urr-15] {
+      .parameters-title[_ngcontent-yqn-15], .parameters-box[_ngcontent-yqn-15] {
         border: 1px solid #d9d9d9;
         padding: 15px;
         background-color: #f5f5f5;
       }
-      .parameters-title[_ngcontent-urr-15] {
+      .parameters-title[_ngcontent-yqn-15] {
         border-bottom: none;
         margin-bottom: -2px;
         background-color: #fff;
       }
-      .parameters-box[_ngcontent-urr-15] {
+      .parameters-box[_ngcontent-yqn-15] {
         border: 1px solid #d9d9d9;
         border-top: none;
         border-radius: 4px;
         margin-bottom: 20px;
         padding-top: 0px;
-      }</style><style>.sample-code-title[_ngcontent-urr-16], .sample-code-box[_ngcontent-urr-16] {
+      }</style><style>.sample-code-title[_ngcontent-yqn-16], .sample-code-box[_ngcontent-yqn-16] {
   border: 1px solid #d9d9d9;
 }
-.sample-code-title[_ngcontent-urr-16] {
+.sample-code-title[_ngcontent-yqn-16] {
   padding: 15px;
   border-bottom: none;
   margin-bottom: -2px;
   background-color: #fff;
 }
-.sample-code-box[_ngcontent-urr-16] {
+.sample-code-box[_ngcontent-yqn-16] {
   border: 1px solid #d9d9d9;
   border-top: none;
   border-radius: 4px;
 }
-.sample-code-box[_ngcontent-urr-16]   pre.hljs[_ngcontent-urr-16] {
+.sample-code-box[_ngcontent-yqn-16]   pre.hljs[_ngcontent-yqn-16] {
   border: none;
   margin-bottom: 0px;
 }
-.sample-code-box[_ngcontent-urr-16]   pre[_ngcontent-urr-16]    > code[_ngcontent-urr-16] {
+.sample-code-box[_ngcontent-yqn-16]   pre[_ngcontent-yqn-16]    > code[_ngcontent-yqn-16] {
   white-space: pre;
 }
-.show-setup-checkbox[_ngcontent-urr-16] {
+.show-setup-checkbox[_ngcontent-yqn-16] {
   display: block;
 }
-.show-setup-checkbox[_ngcontent-urr-16]   input[_ngcontent-urr-16] {
+.show-setup-checkbox[_ngcontent-yqn-16]   input[_ngcontent-yqn-16] {
   margin-right: 8px;
-}</style><style>.parameter[_ngcontent-urr-19] {
+}</style><style>.parameter[_ngcontent-yqn-19] {
   margin-bottom: 15px;
 }
 
-.dropdown[_ngcontent-urr-19]    > a[_ngcontent-urr-19] {
+.dropdown[_ngcontent-yqn-19]    > a[_ngcontent-yqn-19] {
   width: 100%;
+  text-align: left;
+  overflow: hidden;
+}
+.dropdown[_ngcontent-yqn-19]    > a[_ngcontent-yqn-19]   i.fa-caret-down[_ngcontent-yqn-19] {
+  float: right;
 }
 
-input[type="file"][_ngcontent-urr-19] {
+input[type="file"][_ngcontent-yqn-19] {
   display: none;
 }
 
-.input-group-btn[_ngcontent-urr-19]   .btn[_ngcontent-urr-19] {
+.input-group-btn[_ngcontent-yqn-19]   .btn[_ngcontent-yqn-19] {
   max-width: 100px;
   text-overflow: ellipsis;
   overflow-x: hidden;
 }
 
-.description[_ngcontent-urr-19]   p[_ngcontent-urr-19] {
+.description[_ngcontent-yqn-19]   p[_ngcontent-yqn-19] {
   margin-bottom: 0px;
-}</style><style>.try-it-button[_ngcontent-urr-8] {
+}</style><style>.try-it-button[_ngcontent-yqn-8] {
       margin-bottom: 30px;
     }
-    .nav-tabs[_ngcontent-urr-8] {
+    .nav-tabs[_ngcontent-yqn-8] {
       margin-bottom: 15px;
     }
-    .status-code-tabs[_ngcontent-urr-8] {
+    .status-code-tabs[_ngcontent-yqn-8] {
       font-weight: bold;
     }
-    .parameter[_ngcontent-urr-8] {
+    .parameter[_ngcontent-yqn-8] {
       margin-bottom: 20px;
     }
-    .parameter-details[_ngcontent-urr-8] {
+    .parameter-details[_ngcontent-yqn-8] {
       padding-left: 15px;
-    }</style><style>subschema[_ngcontent-urr-13] {
+    }</style><style>subschema[_ngcontent-yqn-13] {
       display: block;
-    }</style><style>subschema[_ngcontent-urr-14] {
+    }</style><style>subschema[_ngcontent-yqn-14] {
         display: block;
         margin-left: 10px;
       }
-      .sibling-group[_ngcontent-urr-14]    > schema[_ngcontent-urr-14] {
+      .sibling-group[_ngcontent-yqn-14]    > schema[_ngcontent-yqn-14] {
         margin-left: 0px;
       }
-      .sibling-group[_ngcontent-urr-14]   h5[_ngcontent-urr-14] {
+      .sibling-group[_ngcontent-yqn-14]   h5[_ngcontent-yqn-14] {
         font-weight: normal;
         font-style: italic;
       }
-      .enum[_ngcontent-urr-14], .description[_ngcontent-urr-14] {
+      .enum[_ngcontent-yqn-14], .description[_ngcontent-yqn-14] {
         padding-left: 10px;
       }
-      [_nghost-urr-14]     subschema .description p {
+      [_nghost-yqn-14]     subschema .description p {
         margin-bottom: 0px;
-      }</style><style>.parameters[_ngcontent-urr-21] {
+      }</style><style>.parameters[_ngcontent-yqn-21] {
         padding-left: 15px;
       }</style></head> <body class=" spaced-for-kaltura-nav"> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:2px;width:0}</style> <div id="LoadingIndicator"> <div id="LoadingIndicatorProgress" class="bg-primary"></div> </div> <script> if (!window.lucybot.prerender) {
       var totalTime = 5000;
@@ -300,9 +310,9 @@ if (!keepSidebar) {
 </script>
 
  <app class="loading" ng-version="2.4.7">
-      <router-outlet></router-outlet><documentation><div class="container-fluid main-container" id="Documentation"><side-menu basepage="documentation" _nghost-urr-9=""><div _ngcontent-urr-9="" class="row"><div _ngcontent-urr-9="" class="col-xs-12 col-sm-4 col-md-3"><a _ngcontent-urr-9="" class="btn btn-primary visible-xs show-menu-mobile-button"><span _ngcontent-urr-9="">Navigate</span><i _ngcontent-urr-9="" class="fa fa-right fa-caret-down"></i></a><a _ngcontent-urr-9="" class="btn btn-default show-menu-button hidden-xs" hidden=""><i _ngcontent-urr-9="" class="fa fa-bars"></i></a><div _ngcontent-urr-9="" class="side-menu hidden-xs"><h6 _ngcontent-urr-9="" class="menu-heading hidden-xs"><span _ngcontent-urr-9="">Navigation</span><div _ngcontent-urr-9="" class="close-menu-button pull-right"><a _ngcontent-urr-9=""><i _ngcontent-urr-9="" class="fa fa-times"></i></a></div></h6><div _ngcontent-urr-9="" class="input-group input-group-sm"><input _ngcontent-urr-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text"><span _ngcontent-urr-9="" class="input-group-btn"><!--template bindings={}--><a _ngcontent-urr-9="" class="btn btn-default"><span _ngcontent-urr-9="">&nbsp;</span><i _ngcontent-urr-9="" class="fa fa-search"></i><span _ngcontent-urr-9="">&nbsp;</span></a><!--template bindings={}--></span></div><div _ngcontent-urr-9="" class="menu-items"><!--template bindings={}--><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Overview"><span _ngcontent-urr-10="">Overview</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Client_Libraries"><span _ngcontent-urr-10="">Client Libraries</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/XML_Schemas"><span _ngcontent-urr-10="">XML Schemas</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Generate_API_Sessions"><span _ngcontent-urr-10="">Generate API Sessions</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Ingest_and_Upload_Media"><span _ngcontent-urr-10="">Ingest and Upload Media</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Execute_Bulk_Ingest_and_Updates"><span _ngcontent-urr-10="">Execute Bulk Ingest and Updates</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Convert_and_Transcode_Media"><span _ngcontent-urr-10="">Convert and Transcode Media</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Live_Stream_and_Broadcast"><span _ngcontent-urr-10="">Live Stream and Broadcast</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Enrich_and_Organize_Metadata"><span _ngcontent-urr-10="">Enrich and Organize Metadata</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Search_Discover_and_Personalize"><span _ngcontent-urr-10="">Search, Discover and Personalize</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Engage_and_Publish"><span _ngcontent-urr-10="">Engage and Publish</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Review_Media_Analytics"><span _ngcontent-urr-10="">Review Media Analytics</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Deliver_and_Distribute_Media"><span _ngcontent-urr-10="">Deliver and Distribute Media</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Secure_Control_and_Govern"><span _ngcontent-urr-10="">Secure, Control and Govern</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Optimize_API_Requests"><span _ngcontent-urr-10="">Optimize API Requests</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary"></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks"><span _ngcontent-urr-10="">Integration, Scheduling and Hooks</span></a></div><!--template bindings={}--><div _ngcontent-urr-10="" class="side-menu-children"><!--template bindings={}--><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/eventNotificationTemplate"><span _ngcontent-urr-10="">eventNotificationTemplate</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/scheduledTaskProfile"><span _ngcontent-urr-10="">scheduledTaskProfile</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary"></i><a _ngcontent-urr-10="" class="title active" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal"><span _ngcontent-urr-10="">Scheduling Triggers using iCal</span></a></div><!--template bindings={}--><div _ngcontent-urr-10="" class="side-menu-children"><!--template bindings={}--><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEvent"><span _ngcontent-urr-10="">scheduleEvent</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEventResource"><span _ngcontent-urr-10="">scheduleEventResource</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleResource"><span _ngcontent-urr-10="">scheduleResource</span></a></div><!--template bindings={}--></side-menu-item></div></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/integration"><span _ngcontent-urr-10="">integration</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/businessProcessCase"><span _ngcontent-urr-10="">businessProcessCase</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-10="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Integration_Scheduling_and_Hooks/notification"><span _ngcontent-urr-10="">notification</span></a></div><!--template bindings={}--></side-menu-item></div></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Encrypt_and_License_Content"><span _ngcontent-urr-10="">Encrypt and License Content</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Manage_Documents_and_Other_Assets"><span _ngcontent-urr-10="">Manage Documents and Other Assets</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Manage_and_Deliver_Apps_and_Widgets"><span _ngcontent-urr-10="">Manage and Deliver Apps and Widgets</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Manage_Backend_and_Storage"><span _ngcontent-urr-10="">Manage Backend and Storage</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/General_Objects"><span _ngcontent-urr-10="">General Objects</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-urr-9="" _nghost-urr-10=""><div _ngcontent-urr-10="" class="side-menu-item hidden-xs"><i _ngcontent-urr-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-urr-10="" class="title inactive" href="/api-docs/Error_Codes"><span _ngcontent-urr-10="">Error Codes</span></a></div><!--template bindings={}--></side-menu-item></div></div></div><div _ngcontent-urr-9="" class="col-xs-12 col-sm-8 col-md-9"><h3 class="breadcrumbs"><span>Documentation</span><!--template bindings={}--><span><i class="fa fa-chevron-right"></i><span>Scheduling Triggers using iCal</span></span><!--template bindings={}--></h3><!--template bindings={}--><!--template bindings={}--><div class="docs-body"><!--template bindings={}--><div class="docs-contents"><h1 id="scheduling">Scheduling</h1>
+      <router-outlet></router-outlet><documentation><div class="container-fluid main-container" id="Documentation"><side-menu basepage="documentation" _nghost-yqn-9=""><div _ngcontent-yqn-9="" class="row"><div _ngcontent-yqn-9="" class="col-xs-12 col-sm-1 text-center"><a _ngcontent-yqn-9="" class="btn btn-primary visible-xs show-menu-mobile-button"><span _ngcontent-yqn-9="">Navigate</span><i _ngcontent-yqn-9="" class="fa fa-right fa-caret-down"></i></a><a _ngcontent-yqn-9="" class="btn btn-default show-menu-button hidden-xs"><i _ngcontent-yqn-9="" class="fa fa-bars"></i></a><div _ngcontent-yqn-9="" class="side-menu" hidden=""><h6 _ngcontent-yqn-9="" class="menu-heading"><!--template bindings={}--><span _ngcontent-yqn-9="">Navigation</span><!--template bindings={}--><!--template bindings={}--><span _ngcontent-yqn-9="" class="dropdown"><a _ngcontent-yqn-9="" class="dropdown-toggle" data-toggle="dropdown"><i _ngcontent-yqn-9="" class="fa fa-right fa-caret-down"></i></a><ul _ngcontent-yqn-9="" class="dropdown-menu"><li _ngcontent-yqn-9="" class="dropdown-header">API Versions</li><!--template bindings={}--><li _ngcontent-yqn-9="" class="disabled"><a _ngcontent-yqn-9="">Latest</a></li><li _ngcontent-yqn-9=""><a _ngcontent-yqn-9="">Experimental</a></li></ul></span><div _ngcontent-yqn-9="" class="close-menu-button pull-right"><a _ngcontent-yqn-9=""><i _ngcontent-yqn-9="" class="fa fa-times"></i></a></div></h6><div _ngcontent-yqn-9="" class="input-group input-group-sm"><input _ngcontent-yqn-9="" class="form-control ng-untouched ng-pristine ng-valid" type="text"><span _ngcontent-yqn-9="" class="input-group-btn"><!--template bindings={}--><a _ngcontent-yqn-9="" class="btn btn-default"><span _ngcontent-yqn-9="">&nbsp;</span><i _ngcontent-yqn-9="" class="fa fa-search"></i><span _ngcontent-yqn-9="">&nbsp;</span></a><!--template bindings={}--></span></div><div _ngcontent-yqn-9="" class="menu-items"><!--template bindings={}--><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Overview"><span _ngcontent-yqn-10="">Overview</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Client_Libraries"><span _ngcontent-yqn-10="">Client Libraries</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/XML_Schemas"><span _ngcontent-yqn-10="">XML Schemas</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Generate_API_Sessions"><span _ngcontent-yqn-10="">Generate API Sessions</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Ingest_and_Upload_Media"><span _ngcontent-yqn-10="">Ingest and Upload Media</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Execute_Bulk_Ingest_and_Updates"><span _ngcontent-yqn-10="">Execute Bulk Ingest and Updates</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Convert_and_Transcode_Media"><span _ngcontent-yqn-10="">Convert and Transcode Media</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Live_Stream_and_Broadcast"><span _ngcontent-yqn-10="">Live Stream and Broadcast</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Enrich_and_Organize_Metadata"><span _ngcontent-yqn-10="">Enrich and Organize Metadata</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Search_Discover_and_Personalize"><span _ngcontent-yqn-10="">Search, Discover and Personalize</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Engage_and_Publish"><span _ngcontent-yqn-10="">Engage and Publish</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Review_Media_Analytics"><span _ngcontent-yqn-10="">Review Media Analytics</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Deliver_and_Distribute_Media"><span _ngcontent-yqn-10="">Deliver and Distribute Media</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Secure_Control_and_Govern"><span _ngcontent-yqn-10="">Secure, Control and Govern</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Optimize_API_Requests"><span _ngcontent-yqn-10="">Optimize API Requests</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary"></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks"><span _ngcontent-yqn-10="">Integration, Scheduling and Hooks</span></a></div><!--template bindings={}--><div _ngcontent-yqn-10="" class="side-menu-children"><!--template bindings={}--><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/eventNotificationTemplate"><span _ngcontent-yqn-10="">eventNotificationTemplate</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/scheduledTaskProfile"><span _ngcontent-yqn-10="">scheduledTaskProfile</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary"></i><a _ngcontent-yqn-10="" class="title active" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal"><span _ngcontent-yqn-10="">Scheduling Triggers using iCal</span></a></div><!--template bindings={}--><div _ngcontent-yqn-10="" class="side-menu-children"><!--template bindings={}--><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEvent"><span _ngcontent-yqn-10="">scheduleEvent</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEventResource"><span _ngcontent-yqn-10="">scheduleEventResource</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleResource"><span _ngcontent-yqn-10="">scheduleResource</span></a></div><!--template bindings={}--></side-menu-item></div></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/integration"><span _ngcontent-yqn-10="">integration</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/businessProcessCase"><span _ngcontent-yqn-10="">businessProcessCase</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-10="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Integration_Scheduling_and_Hooks/notification"><span _ngcontent-yqn-10="">notification</span></a></div><!--template bindings={}--></side-menu-item></div></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Encrypt_and_License_Content"><span _ngcontent-yqn-10="">Encrypt and License Content</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Manage_Documents_and_Other_Assets"><span _ngcontent-yqn-10="">Manage Documents and Other Assets</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Manage_and_Deliver_Apps_and_Widgets"><span _ngcontent-yqn-10="">Manage and Deliver Apps and Widgets</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Manage_Backend_and_Storage"><span _ngcontent-yqn-10="">Manage Backend and Storage</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/General_Objects"><span _ngcontent-yqn-10="">General Objects</span></a></div><!--template bindings={}--></side-menu-item><side-menu-item _ngcontent-yqn-9="" _nghost-yqn-10=""><div _ngcontent-yqn-10="" class="side-menu-item"><i _ngcontent-yqn-10="" class="fa fa-left fa-ellipsis-v text-primary" hidden=""></i><a _ngcontent-yqn-10="" class="title inactive" preservefragment="" preservequeryparams="" href="/api-docs/Error_Codes"><span _ngcontent-yqn-10="">Error Codes</span></a></div><!--template bindings={}--></side-menu-item></div></div></div><div _ngcontent-yqn-9="" class="col-xs-12 col-sm-11"><h3 class="breadcrumbs"><span>Documentation</span><!--template bindings={}--><span><i class="fa fa-chevron-right"></i><span>Scheduling Triggers using iCal</span></span><!--template bindings={}--></h3><!--template bindings={}--><!--template bindings={}--><div><!--template bindings={}--><!--template bindings={}--><div class="docs-body"><!--template bindings={}--><div class="docs-contents"><h1 id="scheduling">Scheduling</h1>
 <p>The Scheduling API is used for managing automated schedules for features such as lecture recordings. The API supports scheduling events and resource, managing event resources, and managing metadata of related recordings.</p>
-</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div class="docs-children"><h4>Subtopics</h4><ul><!--template bindings={}--><li><a href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEvent"><span>scheduleEvent</span></a></li><li><a href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEventResource"><span>scheduleEventResource</span></a></li><li><a href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleResource"><span>scheduleResource</span></a></li></ul></div></div></div></div></side-menu></div></documentation>
+</div><!--template bindings={}--><!--template bindings={}--><!--template bindings={}--><div class="docs-children"><h4>Subtopics</h4><ul><!--template bindings={}--><li><a href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEvent"><span>scheduleEvent</span></a></li><li><a href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleEventResource"><span>scheduleEventResource</span></a></li><li><a href="/api-docs/Integration_Scheduling_and_Hooks/Scheduling_Triggers_using_iCal/scheduleResource"><span>scheduleResource</span></a></li></ul></div></div></div></div></div></side-menu></div></documentation>
       </app> <div id="KalturaFooter" class="w-section footer-section">
   <div class="w-container container footer-container">
     <div class="row">
@@ -351,8 +361,9 @@ if (!keepSidebar) {
 
   <script src="dist/vendor.bundle.js"></script> <script src="dist/config.bundle.js"></script> <script> if (window.config.loadOpenAPISynchronous) {
       for (let name in window.config.openapi) {
+        let firstVersion = window.config.openapi[name][0];
         window.jquery.ajax({
-          url: 'openapi/' + name + '.openapi.json',
+          url: 'openapi/' + name + '.' + firstVersion.label.replace(/W+/g, '_') + '.openapi.json',
           async: false,
           dataType: 'json',
           success: function (response) {
