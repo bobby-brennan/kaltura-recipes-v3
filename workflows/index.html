@@ -1,4 +1,6 @@
-<html> <head> <base href="/"> <title>Kaltura VPaaS API</title> <link href=dist/vendor.css rel=stylesheet> <link href=css/external.css rel=stylesheet> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" , name=viewport> <script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> </head> <body> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:2px;width:0}</style> <div id=LoadingIndicator> <div id=LoadingIndicatorProgress class=bg-primary></div> </div> <script> if (!window.location.href.match(/[?&]prerender=[^f0]/)) {
+<!DOCTYPE html> <html> <head> <base href="/"> <title></title> <link href=dist/vendor.css rel=stylesheet> <link href=css/external.css rel=stylesheet> <meta content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" , name=viewport> <script>function checkBooleanQueryParam(o){return!!window.location.href.substring(window.location.href.indexOf("?")).match(new RegExp("[?&]"+o+"=[^0f]"))}window.lucybot={},window.lucybot.openapi={},window.lucybot.prerender=checkBooleanQueryParam("prerender"),window.lucybot.embed=checkBooleanQueryParam("embed"),window.lucybot.showNavigation=checkBooleanQueryParam("showNavigation")</script> <style>app.loading,app.loading a,app.loading button{cursor:wait!important}</style> <script src="assets/mixpanel.js"></script>
+<script src="assets/jaco.js"></script>
+<script src="assets/kaltura.js"></script> </head> <body> <style>#LoadingIndicator{position:fixed;top:0;left:0;right:0;height:4px;z-index:10000}#LoadingIndicator #LoadingIndicatorProgress{height:2px;width:0}</style> <div id=LoadingIndicator> <div id=LoadingIndicatorProgress class=bg-primary></div> </div> <script> if (!window.lucybot.prerender) {
       var totalTime = 5000;
       var curPct = 0;
       var interval = setInterval(function() {
@@ -213,4 +215,16 @@ if (!keepSidebar) {
   }
 </script>
 
- </body> <script src=dist/vendor.bundle.js></script> <script src=dist/config.bundle.js></script> <script src=js/openapi.js></script> <script src=js/external.js></script> <script src=dist/app.bundle.js></script> <script src="assets/kaltura.js"></script> </html> 
+ </body> <script src=dist/vendor.bundle.js></script> <script src=dist/config.bundle.js></script> <script> if (window.config.loadOpenAPISynchronous) {
+      for (let name in window.config.openapi) {
+        let firstVersion = window.config.openapi[name][0];
+        window.jquery.ajax({
+          url: 'openapi/' + name + '.' + firstVersion.label.replace(/W+/g, '_') + '.openapi.json',
+          async: false,
+          dataType: 'json',
+          success: function (response) {
+            window.lucybot.openapi[name] = response;
+          }
+        });
+      }
+    } </script> <script src=js/external.js></script> <script src=dist/app.bundle.js></script> </html> 
