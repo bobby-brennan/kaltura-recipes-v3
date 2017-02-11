@@ -63,8 +63,7 @@ You can validate your Kaltura session by calling ```user.get``` without a User I
 ## Logging in with your Login ID
 You can also log in with your Login ID and password by using `user.loginByLoginId`. This will return a new KS.
 
-Note that this KS can only be used to retrieve a list of partnerIds.
-You can then use one of these partnerIds to get a privileged KS.
+Note that this KS can only be used to retrieve a list of partnerIds. You can then use one of these partnerIds to get a privileged KS.
 
 ### API Call
 ```json
