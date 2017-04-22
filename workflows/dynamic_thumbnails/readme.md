@@ -26,15 +26,7 @@ Once the demo loads, try mousing over the thumbnail to see a preview of the vide
   "path": "/service/media/action/get",
   "parameters": [
     {
-      "name": "entryId",
-      "dynamicEnum": {
-        "path": "/service/media/action/list",
-        "method": "get",
-        "array": "objects",
-        "value": "id",
-        "label": "name",
-        "parameters": []
-      }
+      "name": "entryId"
     }
   ]
 }
@@ -50,8 +42,6 @@ Once the demo loads, try mousing over the thumbnail to see a preview of the vide
   <a href="<%- result.downloadUrl %>" target="_blank"><%- result.downloadUrl %></a>
 </p>
 <% } %>
-
-
 ```
 ### Demo
 ```html
@@ -64,8 +54,6 @@ Once the demo loads, try mousing over the thumbnail to see a preview of the vide
   <a href="<%- result.downloadUrl %>" target="_blank"><%- result.downloadUrl %></a>
 </p>
 <% } %>
-
-
 ```
 
 ## Making Rotating Thumnails
@@ -79,8 +67,6 @@ the longer the image will take to load.
 This will return a single image with all the frames side-by-side. To move between frames, set CSS attribute `background-position-x`
 to img_width * frame_number.
 
-
-
 ### API Call
 ```json
 {
@@ -92,14 +78,6 @@ to img_width * frame_number.
       "dynamicValue": {
         "fromStep": 0,
         "value": "id"
-      },
-      "dynamicEnum": {
-        "parameters": [],
-        "array": "objects",
-        "path": "/service/media/action/list",
-        "method": "get",
-        "value": "id",
-        "label": "name"
       }
     },
     {
